@@ -98,7 +98,7 @@ These are some of the required steps, tips and tricks when it comes to running a
     Settings (under `LocalPlatformSettings`):
     - `LocalAppMode` - (default `file`) If set to `http`, LocalTest will find the active app configuration and policy.xml using apis exposed on `LocalAppUrl`. (note that this is a new setting needs to be added manually under `LocalPlatformSettings`, it might also require updates to altinn dependencies for your apps in order to support this functionality)
     - `LocalAppUrl` - If `LocalAppMode` == `"http"`, this URL will be used instead of `AppRepositoryBasePath` to find apps and their files. Typically the value will be `"http://localhost:5005"`
-    - `LocalTestingStorageBasePath` - The folder to which LocalTest will store instances and data being created during testing.
+    - `LocalTestingStorageBasePath` - The folder to which LocalTest will store instances and data being created during testing. This folder needs to be manually added. 
     - `AppRepositoryBasePath` - The folder where LocalTest will look for apps and their files if `LocalAppMode` == `"file"`. This is typically the parent directory where you checkout all your apps.
     - `LocalTestingStaticTestDataPath` - Test user data like profile, register and roles. (`<path to altinn-studio repo>/src/development/TestData/`)
 
