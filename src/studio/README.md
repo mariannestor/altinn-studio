@@ -20,16 +20,16 @@ These instructions will get you a copy of Altinn Studio up and running on your l
 4. A code editor - we like [Visual Studio Code](https://code.visualstudio.com/Download)
    - Also install [recommended extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions) (f.ex. [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp))
 5. [Docker Desktop](https://www.docker.com/products/docker-desktop)
-6. Update hosts file (C:/Windows/System32/drivers/etc/hosts) by adding the following values as an local administrator:
+6. Update hosts file (C:/Windows/System32/drivers/etc/hosts) by adding the following values as a local administrator:
    ```txt
    localhost altinn3.no
    127.0.0.1 altinn3.no
    127.0.0.1 altinn3local.no
    ```
-   _On MacOS add the same values to values `/private/etc/hosts` with `sudo nano /private/etc/hosts` in treminal._
+   _On macOS add the same values to `/private/etc/hosts` with `sudo nano /private/etc/hosts` in terminal._
 7. If you are running Docker Desktop in Hyper-V mode you need to make sure your C drive is shared with Docker, Docker Settings -> Shared Drives
    The File sharing tab is only available in Hyper-V mode, because in WSL 2 mode and Windows container mode all files are automatically shared by Windows.
-   On MacOS: Change docker-compose.yml (both)
+   On macOS: Change docker-compose.yml (both)
    ```yaml
    volumes:
      - 'C:/AltinnCore/Repos:/AltinnCore/Repos'
@@ -39,7 +39,7 @@ These instructions will get you a copy of Altinn Studio up and running on your l
    volumes:
      - '/Users/<yourname>/AltinnCore/Repos:/AltinnCore/Repos'
    ```
-8. World Wide Web Publishing Service must be disabled, Services -> "World Wide Web Publishing Service" rigth click and choose "stop"
+8. World Wide Web Publishing Service must be disabled, Services -> "World Wide Web Publishing Service" right click and choose "stop"
 
 ### Installing
 
@@ -74,7 +74,7 @@ docker-compose up -d --build altinn_designer
 
 #### Designer
 
-The Designer component can be run locally when developing/debugging. The rest of the solution (`repository` and `load-balancer`) will still have to be running in containers. Follow the install steps above if this has not already been done.
+The Designer component can be run locally when developing/debugging. The rest of the solution (`repository` and `load-balancer`) will still have to be running in containers. Follow the installation steps above if this has not already been done.
 
 Stop the container running Designer.
 
@@ -92,7 +92,9 @@ yarn run gulp-install-deps
 
 On MacOS you need two extra steps:
 
-1. change the RepositoryLocation in src/studio/src/designer/backend/appsettings.json to
+1. change the RepositoryLocation in
+[`src/studio/src/designer/backend/appsettings.json`](src/designer/backend/appsettings.json)
+to
 
    ```json
    "ServiceRepositorySettings": {
@@ -129,7 +131,7 @@ yarn run gulp # run this when there are changes in frontend that you want to ser
 dotnet run
 ```
 
-Which will build the Designer .net backend and the designer react app, but not listen to changes to the react app.
+Which will build the Designer .NET backend and the designer react app, but not listen to changes to the react app.
 
 #### Building other react apps
 
@@ -139,7 +141,9 @@ If you need to rebuild other react apps, for instance `dashboard` or `app-develo
 yarn run build
 ```
 
-Some of the react projects also have various other predefined scripts, which can be viewed in the `package.json` file which is located in the root folder of each react project, example `src/studio/src/designer/frontend/dashboard`.
+Some of the React projects also have various other predefined scripts,
+which can be viewed in the `package.json` file which is located in the root folder of each react project.
+For example: [`src/studio/src/designer/frontend/dashboard/package.json`](src/designer/frontend/dashboard/package.json).
 
 ## Running the tests
 
@@ -150,13 +154,13 @@ Automated end to end tests are currently being developed.
 ### Lint checks
 
 1. Navigate to the folder `src/studio/src/designer/frontend`.
-2. Execute `yarn --immutable`. This step is only nescessary if you have not already done it, or if you change branches.
+2. Execute `yarn --immutable`. This step is only necessary if you have not already done it, or if you change branches.
 3. Execute `yarn run lint`.
 
 ### Unit tests
 
 1. Navigate to the folder `src/studio/src/designer/frontend`.
-2. Execute `yarn --immutable`. This step is only nescessary if you have not already done it, or if you change branches.
+2. Execute `yarn --immutable`. This step is only necessary if you have not already done it, or if you change branches.
 3. Execute `yarn run test`.
 
 ## Deployment
@@ -165,8 +169,10 @@ The current build is deployed in Kubernetes on Azure. Automated CI/CD using Azur
 
 ## Built With
 
-- [React](https://reactjs.org/)/[Redux](https://redux.js.org/) - The front-end framework
-- [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/)/[C#](https://docs.microsoft.com/en-us/dotnet/csharp/) - The back-end framework
+- [React](https://reactjs.org/) - The front-end framework
+- [Redux](https://redux.js.org/)
+- [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/)
+- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) - The back-end framework
 - [yarn](https://yarnpkg.com/) - Package management
 - [Docker](https://www.docker.com/) - Container platform
 - [Kubernetes](https://kubernetes.io/) - Container orchestration

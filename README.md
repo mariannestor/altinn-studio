@@ -32,7 +32,8 @@ Read [the Altinn Studio documentation](https://docs.altinn.studio/) to get start
 
 ## Developing apps?
 
-If you just want to quickly perform tests of your app on your development machine you can follow the instructions on how to [run apps locally](LOCALAPP.md).
+If you just want to quickly perform tests of your app on your development machine
+you can follow the instructions on how to [run apps locally](LOCALAPP.md).
 
 ## Getting Started
 
@@ -50,11 +51,11 @@ cd altinn-studio
 
 #### Develop Altinn Studio
 
-To run Altinn Studio locally, follow the [Altinn Studio instructions](/src/studio/README.md).
+To run Altinn Studio locally, follow the [Altinn Studio instructions](src/studio/README.md).
 
 #### Develop or run Apps
 
-First make sure to [follow the prerequisites for Altinn Studio](/src/studio/README.md#prerequisites).
+First make sure to [follow the prerequisites for Altinn Studio](src/studio/README.md#prerequisites).
 _If you need to develop or debug App-Frontend, you can follow the description in **[app-frontend-react repository](https://github.com/Altinn/app-frontend-react#developing-app-frontend)**_
 
 It's possible to run an app locally in order to test and debug it. It needs a local version of the platform services to work.
@@ -107,7 +108,7 @@ docker-compose down
    - If you need to debug (or run locally) the app front-end, see details in [app-frontend-react repository](https://github.com/Altinn/app-frontend-react#developing-app-frontend)
 
 The app and local platform services are now running locally.
-If you have configured your hosts as [described in the prerequisites](/src/studio/README.md#prerequisites), the app can be accessed on altinn3local.no.
+If you have configured your hosts as [described in the prerequisites](src/studio/README.md#prerequisites), the app can be accessed on altinn3local.no.
 
 Log in with a test user, using your app name and org name. This will redirect you to the app.
 
@@ -156,7 +157,7 @@ The script wil also listen to changes in the receipt react app, rebuild and copy
 
 ### Frontend lint and unit tests
 
-See readme in [studio](/src/studio/README.md#running-the-tests) and [Altinn.Apps AppFrontend](/src/Altinn.Apps/AppFrontend/react/README.md#running-the-tests) projects for details on how to run these tests.
+See readme in [studio](src/studio/README.md#running-the-tests) and [Altinn.Apps AppFrontend](src/Altinn.Apps/AppFrontend/react/README.md#running-the-tests) projects for details on how to run these tests.
 
 ## Deployment
 
