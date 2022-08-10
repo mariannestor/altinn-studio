@@ -26,12 +26,26 @@ namespace LocalTest.Services.LocalApp.Implementation
 
         public async Task<string?> GetXACMLPolicy(string appId)
         {
-            return await File.ReadAllTextAsync(Path.Join(GetAppPath(appId), $"App/config/authorization/policy.xml"));
+            string path = Path.Join(GetAppPath(appId), "config", "authorization", "policy.xml");
+
+            if (!File.Exists(path))
+            {
+                path = Path.Join(GetAppPath(appId), "App", "config", "authorization", "policy.xml");
+            }
+
+            return await File.ReadAllTextAsync(path);
         }
 
         public async Task<Application?> GetApplicationMetadata(string appId)
         {
-            var filename = Path.Join(GetAppPath(appId), $"App/config/applicationmetadata.json");
+            string filename = Path.Join(GetAppPath(appId), "config", "applicationmetadata.json");
+
+            if (!File.Exists(filename))
+            {
+                filename = Path.Join(GetAppPath(appId), "App", "config", "applicationmetadata.json");
+            }
+
+
             if (File.Exists(filename))
             {
                 var content = await File.ReadAllTextAsync(filename, Encoding.UTF8);
@@ -83,6 +97,12 @@ namespace LocalTest.Services.LocalApp.Implementation
         public async Task<TextResource?> GetTextResource(string org, string app, string language)
         {
             string path = Path.Join(GetAppPath(app), "config", "texts", $"resource.{language.AsFileName()}.json");
+
+            if (!File.Exists(path))
+            {
+                path = Path.Join(GetAppPath(app), "App", "config", "texts", $"resource.{language.AsFileName()}.json");
+
+            }
 
             if (File.Exists(path))
             {
