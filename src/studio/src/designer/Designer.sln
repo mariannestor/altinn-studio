@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Designer", "backend\Designer.csproj", "{6D0AC0E2-5A9A-4804-AA89-48000067AEB0}"
 EndProject
@@ -9,9 +9,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "..\..\doc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Designer.Tests", "backend.Tests\Designer.Tests.csproj", "{9DB55096-4A57-4E3D-9D2C-B2405C461267}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModeling", "DataModeling\DataModeling.csproj", "{C7D0A356-65CA-411E-AB7E-6EBBA109D6CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModeling", "DataModeling\DataModeling.csproj", "{B5B494B4-88BA-407E-9CA3-9516FACD58CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModeling.Tests", "DataModeling.Tests\DataModeling.Tests.csproj", "{0D93F654-B4E2-4295-928E-374F40C8ACE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModeling.Console", "DataModeling.Console\DataModeling.Console.csproj", "{5BBF9C19-9313-47BD-90EC-982514211ADB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,18 @@ Global
 		{9DB55096-4A57-4E3D-9D2C-B2405C461267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB55096-4A57-4E3D-9D2C-B2405C461267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DB55096-4A57-4E3D-9D2C-B2405C461267}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7D0A356-65CA-411E-AB7E-6EBBA109D6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7D0A356-65CA-411E-AB7E-6EBBA109D6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7D0A356-65CA-411E-AB7E-6EBBA109D6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7D0A356-65CA-411E-AB7E-6EBBA109D6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B494B4-88BA-407E-9CA3-9516FACD58CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B494B4-88BA-407E-9CA3-9516FACD58CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B494B4-88BA-407E-9CA3-9516FACD58CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B494B4-88BA-407E-9CA3-9516FACD58CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D93F654-B4E2-4295-928E-374F40C8ACE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D93F654-B4E2-4295-928E-374F40C8ACE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D93F654-B4E2-4295-928E-374F40C8ACE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D93F654-B4E2-4295-928E-374F40C8ACE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBF9C19-9313-47BD-90EC-982514211ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBF9C19-9313-47BD-90EC-982514211ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBF9C19-9313-47BD-90EC-982514211ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBF9C19-9313-47BD-90EC-982514211ADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
