@@ -1,19 +1,8 @@
-import {
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  TextField,
-} from '@material-ui/core';
+import { Checkbox, Divider, FormControlLabel, TextField as MaterialTextField } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  CombinationKind,
-  FieldType,
-  ILanguage,
-  ISchemaState,
-  UiSchemaItem,
-} from '../../types';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { CombinationKind, FieldType, ILanguage, UiSchemaItem } from '../../types';
 import { NameError, ObjectKind } from '../../types/enums';
 import { isValidName } from '../../utils/checks';
 import { getTranslation } from '../../utils/language';
@@ -29,17 +18,14 @@ import {
   setTitle,
   setType,
 } from '../../features/editor/schemaEditorSlice';
-import {
-  combinationIsNullable,
-  getDomFriendlyID,
-  nullableType,
-} from '../../utils/schema';
+import { combinationIsNullable, getDomFriendlyID, nullableType } from '../../utils/schema';
 import { TypeSelect } from './TypeSelect';
 import { ReferenceSelectionComponent } from './ReferenceSelectionComponent';
 import { CombinationSelect } from './CombinationSelect';
 import { getObjectKind } from '../../utils/ui-schema-utils';
 import { Label } from './Label';
 import { getCombinationOptions, getTypeOptions } from './helpers/options';
+import { TextField, ErrorMessage } from '@altinn/altinn-design-system';
 
 export interface IItemDataComponentProps {
   selectedItem: UiSchemaItem | null;
@@ -53,7 +39,7 @@ const useStyles = makeStyles(
       background: 'white',
       color: 'black',
       border: '1px solid #006BD8',
-      boxSsizing: 'border-box',
+      boxSizing: 'border-box',
       marginTop: 2,
       padding: 4,
       '&.Mui-disabled': {
@@ -92,11 +78,7 @@ const useStyles = makeStyles(
   }),
 );
 
-export function ItemDataComponent({
-  language,
-  selectedItem,
-  checkIsNameInUse,
-}: IItemDataComponentProps) {
+export function ItemDataComponent({ language, selectedItem, checkIsNameInUse }: IItemDataComponentProps) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const objectKind = getObjectKind(selectedItem ?? undefined);
@@ -106,11 +88,7 @@ export function ItemDataComponent({
   const [description, setItemDescription] = useState<string>('');
   const [title, setItemTitle] = useState<string>('');
   const [fieldType, setFieldType] = useState<FieldType | undefined>(undefined);
-  const [arrayType, setArrayType] = useState<FieldType | string | undefined>(
-    undefined,
-  );
-
-  const focusName = useSelector((state: ISchemaState) => state.focusNameField);
+  const [arrayType, setArrayType] = useState<FieldType | string | undefined>(undefined);
 
   useEffect(() => {
     setNodeName(selectedItem?.displayName ?? '');
@@ -120,18 +98,6 @@ export function ItemDataComponent({
     setFieldType(selectedItem?.type);
     setArrayType(selectedItem?.items?.$ref ?? selectedItem?.items?.type ?? '');
   }, [selectedItem]);
-
-  const nameFieldRef = useCallback(
-    (node: any) => {
-      if (node && focusName && focusName === selectedId) {
-        setTimeout(() => {
-          node.select();
-        }, 100);
-      }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    },
-    [focusName, selectedId],
-  );
 
   const onNameChange = (e: any) => {
     const name: string = e.target.value;
@@ -168,7 +134,7 @@ export function ItemDataComponent({
       dispatch(
         addCombinationItem({
           path: selectedItem.path,
-          props: { type: 'null' },
+          props: { type: FieldType.Null },
         }),
       );
     } else {
@@ -233,12 +199,9 @@ export function ItemDataComponent({
     }
 
     if (checked) {
-      const type =
-        objectKind === ObjectKind.Reference
-          ? selectedItem.$ref
-          : selectedItem.type;
+      const type = objectKind === ObjectKind.Reference ? selectedItem.$ref : selectedItem.type;
       onChangeArrayType(type);
-      onChangeType('array');
+      onChangeType(FieldType.Array);
     } else {
       if (objectKind === ObjectKind.Reference) {
         onChangeRef(selectedItem.path, arrayType || '');
@@ -276,30 +239,25 @@ export function ItemDataComponent({
         <>
           <p className={classes.name}>{t('name')}</p>
           <TextField
-            InputProps={inputProps}
             aria-describedby='Selected Item Name'
-            className={classes.field}
-            error={!!nameError}
-            fullWidth={true}
-            helperText={t(nameError)}
             id='selectedItemName'
-            inputRef={nameFieldRef}
             onBlur={handleChangeNodeName}
             onChange={onNameChange}
             placeholder='Name'
             value={nodeName}
+            aria-errormessage={t(nameError)}
+            aria-placeholder='Name'
           />
+          {nameError && <ErrorMessage>{t(nameError)}</ErrorMessage>}
         </>
       )}
       {selectedItem && objectKind === ObjectKind.Field && (
         <>
           <Label>{t('type')}</Label>
           <TypeSelect
-            value={selectedItem.type === 'array' ? arrayType : fieldType}
+            value={selectedItem.type === FieldType.Array ? arrayType : fieldType}
             id={`${getDomFriendlyID(selectedItem.path)}-type-select`}
-            onChange={
-              selectedItem.type === 'array' ? onChangeArrayType : onChangeType
-            }
+            onChange={selectedItem.type === FieldType.Array ? onChangeArrayType : onChangeType}
             label={t('type')}
             options={getTypeOptions(t)}
           />
@@ -323,7 +281,7 @@ export function ItemDataComponent({
           control={
             <Checkbox
               color='primary'
-              checked={selectedItem?.type === 'array'}
+              checked={selectedItem?.type === FieldType.Array}
               onChange={handleIsArrayChanged}
               name='checkedMultipleAnswers'
             />
@@ -361,17 +319,13 @@ export function ItemDataComponent({
       <Divider />
       <Label>{t('descriptive_fields')}</Label>
       <TextField
-        InputProps={inputProps}
-        className={classes.field}
-        fullWidth
         id={`${getDomFriendlyID(selectedId ?? '')}-title`}
-        margin='normal'
         onBlur={onChangeTitle}
         onChange={(e) => setItemTitle(e.target.value)}
         value={title}
       />
       <Label>{t('description')}</Label>
-      <TextField
+      <MaterialTextField
         InputProps={inputProps}
         className={classes.field}
         fullWidth
