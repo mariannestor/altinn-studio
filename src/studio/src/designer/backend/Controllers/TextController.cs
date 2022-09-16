@@ -98,7 +98,6 @@ namespace Altinn.Studio.Designer.Controllers
         [HttpPost]
         public IActionResult SaveResource([FromBody] dynamic jsonData, string id, string org, string app)
         {
-
             id = id.Split('-')[0];
             JObject json = jsonData;
 
