@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema targetNamespace="http://seres.no/xsd/SPK/KravOmRefusjon_M/2015" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://seres.no/xsd/SPK/KravOmRefusjon_M/2015" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2021-01-20T09:46:50.44+01:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/SPK/KravOmRefusjon_M/2015" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="SPK" />
+      <xsd:attribute name="modellnavn" fixed="KravOmRefusjon_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="KravOmRefusjon_M" />
+  <xsd:complexType name="KravOmRefusjon_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/SPK/Meldingsmodell/KravOmRefusjon_M/477162">
+    <xsd:sequence>
+      <xsd:element name="Rapportoer" type="Rapportoer" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/SPK/Meldingsdel/Rapportoer/477151" />
+      <xsd:element name="InnrapporterteData" type="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/SPK/Meldingsdel/InnrapporterteData/477142" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="3374" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="46279" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Rapportoer" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/SPK/Meldingsdel/Rapportoer/477151">
+    <xsd:sequence>
+      <xsd:element name="typeRefusjon" type="TypeRefusjon" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/typeRefusjon/477149" />
+      <xsd:element name="avsenderOrdning" type="Ordning" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/avsenderOrdning/477148" />
+      <xsd:element name="mottakerOrdning" type="Ordning" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/mottakerOrdning/477147" />
+      <xsd:element name="personopplysninger" type="Personopplysninger" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/personopplysninger/477150" />
+      <xsd:element name="skjemainformasjon" type="SkjemaInformasjon" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/skjemainformasjon/479632" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Personopplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Personopplysninger/477155">
+    <xsd:sequence>
+      <xsd:element name="barn" type="Person" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/barn/484169" />
+      <xsd:element name="hovedperson" type="Person" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/hovedperson/484168" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Person" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Person/484165">
+    <xsd:sequence>
+      <xsd:element name="foedselsnummer" type="Foedselsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/barnsFoedselsnummer/477153" />
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/fornavn/484164" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/etternavn/484163" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SkjemaInformasjon" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/SkjemaInformasjon/479631">
+    <xsd:sequence>
+      <xsd:element name="skjemaNummer" type="Tall" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/skjemaNummer/479630" />
+      <xsd:element name="skjemaTotalt" type="Tall" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/skjemaTotalt/479629" />
+      <xsd:element name="utfyllingMaskinell" type="Alternativ" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/utfyllingMaskinell/479396" />
+      <xsd:element name="referansenummer" type="Referansenummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/referansenummer/482444" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/SPK/Meldingsdel/InnrapporterteData/477142">
+    <xsd:sequence>
+      <xsd:element name="folketrygdsOpplysninger" type="Folketrygdsopplysninger" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/folketrygdsOpplysninger/477139" />
+      <xsd:element name="ytelse" type="Ytelse" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/ytelse/477138" />
+      <xsd:element name="virkningsDato" type="VirkningsDato" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/virkningsDato/480962" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Folketrygdsopplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Folketrygdsopplysninger/477101">
+    <xsd:sequence>
+      <xsd:element name="dagensG" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/gjeldendeGbeloep/478378" />
+      <xsd:element name="egenOpptjening" type="EgenOpptjening" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/egenOpptjening/477097" />
+      <xsd:element name="avdoedsOpptjening" type="AvdoedesOpptjening" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/avdoedsOpptjening/477096" />
+      <xsd:element name="yrkesskadeEgenOpptjening" type="YrkesskadeOpptjening" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/yrkesskadeOpptjening/477094" />
+      <xsd:element name="yrkesskadeAvdoedesOpptjening" type="YrkesskadeOpptjening" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/yrkesskadeAvdoedesOpptjening/480963" />
+      <xsd:element name="korttidsytelser" type="Korttidsytelser" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/korttidsytelser/606901" />
+      <xsd:element name="samordningsbeholdning" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/utledetBeholdning/772857" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EgenOpptjening" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/EgenOpptjening/477093">
+    <xsd:sequence>
+      <xsd:element name="forholdstall" type="Forholdstall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/forholdstall/477089" />
+      <xsd:element name="trygdetid" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/trygdetid/477087" />
+      <xsd:element name="grad" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/grad/477086" />
+      <xsd:element name="pensjonstype" type="NAVPensjonsArt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonstype/478376" />
+      <xsd:element name="skjermingstillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/skjermingstillegg/479386" />
+      <xsd:element name="poengtall" type="PoengtallType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/poengtall/477092" />
+      <xsd:element name="poengaar" type="PoengaarType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/poengaar/477091" />
+      <xsd:element name="tillegg" type="Tillegg" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/tillegg/477090" />
+      <xsd:element name="afpPrivat" type="AFPPrivat" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/afpPrivat/478377" />
+      <xsd:element name="ufoereinformasjon" type="EgenOpptjeningUfoere" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/ufoereinformasjon/576153" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PoengtallType" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Poengtall/477114">
+    <xsd:sequence>
+      <xsd:element name="poengtallMok" type="Poengtall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/poengtallMok/477113" />
+      <xsd:element name="poengtallUok" type="Poengtall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/poengtallUok/477112" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PoengaarType" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Poengaar/477111">
+    <xsd:sequence>
+      <xsd:element name="poengaar45prosent" type="Poengaar" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/poengaar45prosent/477110" />
+      <xsd:element name="poengaar42prosent" type="Poengaar" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/poengaar42prosent/477109" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Tillegg" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Tillegg/477069">
+    <xsd:sequence>
+      <xsd:element name="pensjonsTillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonsTillegg/477068" />
+      <xsd:element name="minstenivaaTillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/minstenivaaTillegg/477067" />
+      <xsd:element name="saerTillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/saerTillegg/477066" />
+      <xsd:element name="satsTillegg" type="SaertilleggSats" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/satsTillegg/477065" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AFPPrivat" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/AFPPrivat/477072">
+    <xsd:sequence>
+      <xsd:element name="afpPrivatTillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/afpPrivatTillegg/477071" />
+      <xsd:element name="afpPrivatKompensasjonstillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/afpPrivatKompensasjonstillegg/477070" />
+      <xsd:element name="forholdstallKompensasjonstillegg" type="Forholdstall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/forholdstallKompensasjonstillegg/484167" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EgenOpptjeningUfoere" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/EgenOpptjeningUfoere/576152">
+    <xsd:sequence>
+      <xsd:element name="beregninggrunnlag" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/beregninggrunnlag/576151" />
+      <xsd:element name="gjenlevendetillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/gjenlevendetillegg/576150" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AvdoedesOpptjening" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/AvdeoedsOpptjening/477081">
+    <xsd:sequence>
+      <xsd:element name="trygdetid" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/trygdetid/477080" />
+      <xsd:element name="pensjonstype" type="NAVPensjonsArt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonstype/478374" />
+      <xsd:element name="ervervsinntekt" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/ervervsinntekt/477088" />
+      <xsd:element name="poengtall" type="PoengtallType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/poengtall/477079" />
+      <xsd:element name="poengaar" type="PoengaarType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/poengaar/477078" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="YrkesskadeOpptjening" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/YrkesskadeOpptjening/477077">
+    <xsd:sequence>
+      <xsd:element name="poengtall" type="Poengtall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/poengtall/477076" />
+      <xsd:element name="trygdetid" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/trygdetid/477075" />
+      <xsd:element name="grad" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/grad/477074" />
+      <xsd:element name="pensjonstype" type="NAVPensjonsArt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonstype/478373" />
+      <xsd:element name="poengaar" type="PoengaarType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/poengaar/477073" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Korttidsytelser" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Arbeidsavklaringspenger/477085">
+    <xsd:sequence>
+      <xsd:element name="grunnlag" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/grunnlag/477084" />
+      <xsd:element name="grad" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/grad/477083" />
+      <xsd:element name="dagsats" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/dagsats/477082" />
+      <xsd:element name="pensjonstype" type="NAVPensjonsArt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonstype/478375" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Ytelse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Ytelse/477064">
+    <xsd:sequence>
+      <xsd:element name="arbeidsgiverId" type="ArbeidsgiverId" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/arbeidsgiversOrgnr/477134" />
+      <xsd:element name="pensjonsOpplysninger" type="Pensjonsopplysninger" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/pensjonsOpplysninger/477063" />
+      <xsd:element name="opphoersaarsak" type="AarsakForOpphoer" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/opphoersaarsak/477061" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Pensjonsopplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Pensjonsopplysninger/477127">
+    <xsd:sequence>
+      <xsd:element name="stillingsprosent" type="Prosent" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/stillingsprosent/477126" />
+      <xsd:element name="samletTjenestetid" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/samletTjenestetid/477125" />
+      <xsd:element name="fullTjenestetid" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/fullTjenestetid/477124" />
+      <xsd:element name="reduksjonsgrad" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/reduksjonsgrad/477123" />
+      <xsd:element name="forholdstall" type="Forholdstall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/levealdersfaktorBenyttet/477119" />
+      <xsd:element name="beregnetGarantitillegg" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/beregnetGarantitillegg/477118" />
+      <xsd:element name="typeUtbetaling" type="UtbetalingsTypeEnum" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/typeUtbetaling/477192" />
+      <xsd:element name="tjenestetidAar" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/tjenestetidAar/477136" />
+      <xsd:element name="fradrag" type="Fradrag" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/fradrag/477121" />
+      <xsd:element name="fiktiveBeregningstall" type="FiktiveBeregningstall" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/fiktiveBeregningstall/477120" />
+      <xsd:element name="pensjonGrunnetAvdoed" type="PensjonGrunnetAvdoed" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/pensjonGrunnetAvdoed/477394" />
+      <xsd:element name="ufoereopplysninger" type="Ufoereopplysninger" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/ufoereopplysninger/576154" />
+      <xsd:element name="viderefoeringAvKonvertertUfoere" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/viderefoeringAvKonvertertUfore/603018" />
+      <xsd:element name="justeringstall" type="Forholdstall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/justeringstall/772859" />
+      <xsd:element name="samordningsBeholdningstillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/samordningsBeholdningstillegg/772858" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Fradrag" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Fradrag/477146">
+    <xsd:sequence>
+      <xsd:element name="samordningslovenParagraf7" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/samordningsloven/478379" />
+      <xsd:element name="personskadeTrygd" type="Personskadetrygd" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/personskadeTrygd/477143" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Personskadetrygd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Personskadetrygd/477117">
+    <xsd:sequence>
+      <xsd:element name="fradragKrigspensjon" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/fradragKrigspensjon/477116" />
+      <xsd:element name="fradragYrkesskade" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/fradragYrkesskade/477115" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FiktiveBeregningstall" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/FiktiveBeregningstall/477108">
+    <xsd:sequence>
+      <xsd:element name="beregnetPoengtall" type="PoengtallType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/beregnetPoengtall/477107" />
+      <xsd:element name="beregnetPoengaar" type="PoengaarType" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/beregnetPoengaar/477106" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PensjonGrunnetAvdoed" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/PensjonGrunnetAvdoed/477393">
+    <xsd:sequence>
+      <xsd:element name="pensjonsArt" type="PensjonsArt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/pensjonsArt/477122" />
+      <xsd:element name="sivilstandRett" type="SivilstandRettType" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/sivilstandRett/483873" />
+      <xsd:element name="avdoed" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/avdoed/484166" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Ufoereopplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/Ufoereopplysninger/576149">
+    <xsd:sequence>
+      <xsd:element name="ufoereytelseNAV" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/ufoereytelseNAV/576148" />
+      <xsd:element name="gjenlevendetillegg" type="BeloepHeltall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/gjenlevendetillegg/576147" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AarsakForOpphoer" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/AarsakForOpphoer/477105">
+    <xsd:sequence>
+      <xsd:element name="opphoersaarsak" type="Opphoersaarsaker" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/opphoersaarsak/477104" />
+      <xsd:element name="doedsdato" type="Dato" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/doedsdato/477103" />
+      <xsd:element name="nyTPOrdning" type="Ordning" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/nyTPOrdning/477102" />
+      <xsd:element name="typeOpphoerUtbetaling" type="OpphoerUtbetalingstype" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/SPK/Relasjonsegenskap/typeOpphoerUtbetaling/477191" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpphoerUtbetalingstype" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/OpphoerUtbetalingstype/478372">
+    <xsd:sequence>
+      <xsd:element name="egenpensjon" type="Alternativ" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/egenpensjon/478371" />
+      <xsd:element name="etterlattepensjon" type="Alternativ" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/etterlattepensjon/478370" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VirkningsDato" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/SPK/Dataobjekttype/VirkningsDato/480961">
+    <xsd:sequence>
+      <xsd:element name="fomDato" type="Dato" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/fomDato/480960" />
+      <xsd:element name="tomDato" type="Dato" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/SPK/Dataegenskap/tomDato/480959" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="TypeRefusjon" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/TypeRefusjon/477160">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="KravOmRefusjon" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KravOmRefusjon/569408" />
+      <xsd:enumeration value="OpphoerAvRefusjon" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/OpphoerAvRefusjon/569407" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Ordning" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Ordning/477397">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Fødselsnummer/575">
+    <xsd:restriction base="Foedselsnummer_RestriksjonFoedselsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer_RestriksjonFoedselsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/SPK/Tegnrestriksjon/RestriksjonFoedselsnummer/569426">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Navn/571">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Tall/561">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Alternativ" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Alternativ/573">
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Referansenummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Referansenummer/482445">
+    <xsd:restriction base="Referansenummer_RestriksjonReferansenummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Referansenummer_RestriksjonReferansenummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/SPK/Tegnrestriksjon/RestriksjonReferansenummer/569420">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BeloepHeltall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/BeloepHeltall/477395">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Forholdstall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Faktor/477166">
+    <xsd:restriction base="Forholdstall_RestriksjonFaktor" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Forholdstall_RestriksjonFaktor" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/SPK/Tallrestriksjon/RestriksjonFaktor/569427">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="6" />
+      <xsd:fractionDigits value="3" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NAVPensjonsArt" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/NAVPensjonsArt/477157">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AFPPR" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AFPPR/569394" />
+      <xsd:enumeration value="AP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AP/569393" />
+      <xsd:enumeration value="AS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AS/569392" />
+      <xsd:enumeration value="AT" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AT/569391" />
+      <xsd:enumeration value="ATTF" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/ATTF/569390" />
+      <xsd:enumeration value="ATTU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/ATTU/569389" />
+      <xsd:enumeration value="BP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/BP/569388" />
+      <xsd:enumeration value="BPU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/BPU/569387" />
+      <xsd:enumeration value="BOE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/BOE/569386" />
+      <xsd:enumeration value="BOEU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/BOEU/569385" />
+      <xsd:enumeration value="EO" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/EO/569384" />
+      <xsd:enumeration value="EP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/EP/569383" />
+      <xsd:enumeration value="INNT" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/INNT/569382" />
+      <xsd:enumeration value="JO" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/JO/569381" />
+      <xsd:enumeration value="JP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/JP/569380" />
+      <xsd:enumeration value="KF" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KF/569379" />
+      <xsd:enumeration value="KFS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KFS/569378" />
+      <xsd:enumeration value="NPU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/NPU/569377" />
+      <xsd:enumeration value="KPS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KPS/569376" />
+      <xsd:enumeration value="KS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KS/569375" />
+      <xsd:enumeration value="KSS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/KSS/569374" />
+      <xsd:enumeration value="NP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/NP/569373" />
+      <xsd:enumeration value="NOE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/NOE/569372" />
+      <xsd:enumeration value="NOEU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/NOEU/569371" />
+      <xsd:enumeration value="OS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/OS/569370" />
+      <xsd:enumeration value="AAP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AAP/569369" />
+      <xsd:enumeration value="RP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/RP/569368" />
+      <xsd:enumeration value="SE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/SE/569367" />
+      <xsd:enumeration value="TU" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/TU/569366" />
+      <xsd:enumeration value="UE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UE/569365" />
+      <xsd:enumeration value="UEA" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UEA/569364" />
+      <xsd:enumeration value="UF" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UF/569363" />
+      <xsd:enumeration value="UFA" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UFA/569362" />
+      <xsd:enumeration value="UP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UP/569361" />
+      <xsd:enumeration value="UPA" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UPA/569360" />
+      <xsd:enumeration value="US" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/US/569359" />
+      <xsd:enumeration value="USA" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/USA/569358" />
+      <xsd:enumeration value="YE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/YE/569357" />
+      <xsd:enumeration value="YF" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/YF/569356" />
+      <xsd:enumeration value="YP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/YP/569355" />
+      <xsd:enumeration value="YS" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/YS/569354" />
+      <xsd:enumeration value="AE" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AE/569353" />
+      <xsd:enumeration value="AF" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/AF/569352" />
+      <xsd:enumeration value="UT" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/UT/576155" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Poengtall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Desimaltall2/477167">
+    <xsd:restriction base="Poengtall_RestriksjonPoengtall" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Poengtall_RestriksjonPoengtall" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/SPK/Tallrestriksjon/RestriksjonPoengtall/569428">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="5" />
+      <xsd:fractionDigits value="2" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Poengaar" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Poengaar/477396">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="SaertilleggSats" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/SaertilleggSats/477156">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="HOY" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/HOY/569351" />
+      <xsd:enumeration value="LAV" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/LAV/569350" />
+      <xsd:enumeration value="OKT" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/OKT/569349" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ArbeidsgiverId" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/ArbeidsgiverId/479389">
+    <xsd:restriction base="ArbeidsgiverId_RestriksjonArbeidsgiverId" />
+  </xsd:simpleType>
+  <xsd:simpleType name="ArbeidsgiverId_RestriksjonArbeidsgiverId" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/SPK/Tegnrestriksjon/RestriksjonArbeidsgiverId/569422">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Prosent" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Prosent/572">
+    <xsd:restriction base="Prosent_RestriksjonDecimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Prosent_RestriksjonDecimal" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/SPK/Tallrestriksjon/RestriksjonDecimal/569429">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="5" />
+      <xsd:fractionDigits value="2" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UtbetalingsTypeEnum" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/UtbetalingsTypeEnum/477193">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="erAP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/erAP/569348" />
+      <xsd:enumeration value="erUP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/erUP/569347" />
+      <xsd:enumeration value="erEP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/erEP/569346" />
+      <xsd:enumeration value="erBP" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/erBP/569345" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PensjonsArt" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/PensjonsArt/477159">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ervervsproevetEktefelle" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/ervervsproevetEktefelle/569406" />
+      <xsd:enumeration value="nettoEtterlattepensjon" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/nettoEtterlattepensjon/569405" />
+      <xsd:enumeration value="ikkeErvervsproevet" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/ikkeErvervsproevet/569404" />
+      <xsd:enumeration value="nettoBarnepensjon" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/nettoBarnepensjon/569403" />
+      <xsd:enumeration value="bruttoBarnepensjon" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/bruttoBarnepensjon/569402" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SivilstandRettType" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/SivilstandRettType/483874">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="gift" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/gift/569344" />
+      <xsd:enumeration value="skilt" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/skilt/569343" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Opphoersaarsaker" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/SPK/Datakodeutvalg/Opphoersaarsaker/477158">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="annet" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/annet/569401" />
+      <xsd:enumeration value="doed" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/doed/569400" />
+      <xsd:enumeration value="friskmeldt" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/friskmeldt/569399" />
+      <xsd:enumeration value="gjengifte" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/gjengifte/569398" />
+      <xsd:enumeration value="byttetTPOrdning" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/byttetTPOrdning/569397" />
+      <xsd:enumeration value="opphoerGrunnetAlder" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/opphoerGrunnetAlder/569396" />
+      <xsd:enumeration value="tilbakeIArbeid" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/SPK/Datakodeelement/tilbakeIArbeid/569395" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dato" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/SPK/Dataenkeltype/Dato/563">
+    <xsd:restriction base="xsd:date" />
+  </xsd:simpleType>
+</xsd:schema>

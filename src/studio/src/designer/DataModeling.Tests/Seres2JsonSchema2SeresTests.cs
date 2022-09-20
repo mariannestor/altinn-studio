@@ -18,13 +18,21 @@ using XmlSchemaValidator = DataModeling.Tests.TestHelpers.XmlSchemaValidator;
 
 namespace DataModeling.Tests
 {
-    public class Seres2JsonSchema2SeresTests: FluentTestsBase<Seres2JsonSchema2SeresTests>
+    public class Seres2JsonSchema2SeresTests : FluentTestsBase<Seres2JsonSchema2SeresTests>
     {
         private readonly ITestOutputHelper _testOutputHelper;
 
-        private XmlSchema _originalXsdSchema;
-        private JsonSchema _convertedJsonSchema;
-        private XmlSchema _convertedXsdSchema;
+        private XmlSchema OriginalXsdSchema { get; set; }
+
+        private JsonSchema ConvertedJsonSchema { get; set; }
+
+        private XmlSchema ConvertedXsdSchema { get; set; }
+
+        private string OriginalXsdSchemaString { get; set; }
+
+        private string ConvertedJsonSchemaString { get; set; }
+
+        private string ConvertedXsdSchemaString { get; set; }
 
         public Seres2JsonSchema2SeresTests(ITestOutputHelper testOutputHelper)
         {
@@ -55,6 +63,99 @@ namespace DataModeling.Tests
                 .And.When.ConvertedJsonSchemaConvertedToXsdSchema()
                 .Then.OriginalAndConvertedXsdSchemasShouldBeEquivalent()
                 .And.XmlShouldBeValidWithOriginalAndConvertedSchema(xmlPath);
+        }
+
+        [Theory]
+
+        // // Without issues:
+        // // Sequence instead attribute. Added minOccurs=0 in converted and not present in original, nillable attribue removed in converted, seres:elementtype and seres:guid removed
+        // [InlineData("Failing/nsm__6244-47141.xsd")]
+        //
+        // // targetNamespace mess up the schema? or something else?
+        // [InlineData("Failing/fd__3320-44007.xsd")]
+        // [InlineData("Failing/fd__6107-46232.xsd")]
+        // [InlineData("Failing/spk__3374-46279.xsd")]
+        //
+        // // Empty sequence budsjett failing
+        // [InlineData("Failing/hdir__3431-39110.xsd")]
+        //
+        // // Date simple restriction
+        // // https://github.com/Altinn/altinn-studio/issues/8981
+        // [InlineData("Failing/brg__RR-0200 Mellombalanse_M_2020-05-18_6301_45717_SERES.xsd")]
+        // [InlineData("Failing/brg__1266-42897.xsd")]
+        // [InlineData("Failing/brg__1266-43710.xsd")]
+        // [InlineData("Failing/brg__1266-44775.xsd")]
+        // [InlineData("Failing/brg__3106-39629.xsd")]
+        // [InlineData("Failing/brg__3124-39627.xsd")]
+        // [InlineData("Failing/brg__3228-39613.xsd")]
+        // [InlineData("Failing/brg__3238-39623.xsd")]
+        // [InlineData("Failing/brg__3373-36491.xsd")]
+        // [InlineData("Failing/brg__3428-39614.xsd")]
+        // [InlineData("Failing/brg__3430-39615.xsd")]
+        // [InlineData("Failing/brg__4213-39628.xsd")]
+        // [InlineData("Failing/brg__6199-44481.xsd")]
+        // [InlineData("Failing/brg__6301-45717.xsd")]
+        //
+        // // Complex type definition gets lost
+        // // https://github.com/Altinn/altinn-studio/issues/8978
+        // [InlineData("Failing/brg__5202-41077.xsd")]
+        // [InlineData("Failing/krt__3443-44403.xsd")]
+        // [InlineData("Failing/krt__4702-44390.xsd")]
+        // [InlineData("Failing/krt__4943-44355.xsd")]
+        // [InlineData("Failing/sfd__6960-46467.xsd")]
+        // [InlineData("Failing/slv__6110-44436.xsd")]
+        // [InlineData("Failing/ssb__4949-43795.xsd")]
+        // [InlineData("Failing/ssb__5272-41450.xsd")]
+        // [InlineData("Failing/fd__3303-43421.xsd")]
+        //
+        // // seres:beskrivelse
+        // // https://github.com/Altinn/altinn-studio/issues/8976
+        // [InlineData("Failing/ssb__4108-41505.xsd")]
+        // [InlineData("Failing/ssb__4257-41169.xsd")]
+        // [InlineData("Failing/ssb__4265-41400.xsd")]
+        // [InlineData("Failing/ssb__4306-40093.xsd")]
+        // [InlineData("Failing/ssb__4465-41280.xsd")]
+        // [InlineData("Failing/ssb__6823-46701.xsd")]
+        //
+        // // minLength and maxLength merged to length
+        // // https://github.com/Altinn/altinn-studio/issues/8973 allso missing complex type
+        // // https://github.com/Altinn/altinn-studio/issues/8978
+        // [InlineData("Failing/krt__4710-45001.xsd")]
+        // [InlineData("Failing/krt__4765-44992.xsd")]
+        //
+        // // minOccurs = 0, maxOccures="unbounded" and type defined. removing type
+        // // https://github.com/Altinn/altinn-studio/issues/8965
+        // [InlineData("Failing/brg__4687-44089.xsd")]
+        // [InlineData("Failing/fd__3365-36837.xsd")]
+        // [InlineData("Failing/fd__4388-39288.xsd")]
+        // [InlineData("Failing/hmrhf__5460-34460.xsd")]
+        // [InlineData("Failing/hmrhf__5660-34542.xsd")]
+        // [InlineData("Failing/ok__5262-41499.xsd")]
+        // [InlineData("Failing/sfd__4826-43294.xsd")]
+        // [InlineData("Failing/slv__5404-41299.xsd")]
+        // [InlineData("Failing/srf__6947-46327.xsd")]
+        // [InlineData("Failing/tad__6085-44147.xsd")]
+        // [InlineData("Failing/ttd__6244-46571.xsd")]
+        //
+        // // Not only root element
+        // // https://github.com/Altinn/altinn-studio/issues/8970
+        // [InlineData("Failing/ssb__3101-35865.xsd")]
+        // [InlineData("Failing/ssb__3804-37700.xsd")]
+        // [InlineData("Failing/ssb__3825-37785.xsd")]
+        // [InlineData("Failing/ssb__3983-37382.xsd")]
+        //
+        // // Simple type restriction ref
+        // // https://github.com/Altinn/altinn-studio/issues/8982
+        // [InlineData("Failing/skd__4401-32883.xsd")]
+
+        public void FailingSchemas(string xsdSchemaPath)
+        {
+            Given.That.XsdSchemaLoaded(xsdSchemaPath)
+                .And.JsonSchemaKeywordsRegistered()
+                .When.LoadedXsdSchemaConvertedToJsonSchema()
+                .And.When.ConvertedJsonSchemaConvertedToXsdSchema()
+                .And.SchemasSerializedToString()
+                .Then.OriginalAndConvertedXsdSchemasShouldBeEquivalent();
         }
 
         private bool ValidateXml(XmlSchema xmlSchema, string xml)
@@ -97,28 +198,41 @@ namespace DataModeling.Tests
 
         private Seres2JsonSchema2SeresTests XsdSchemaLoaded(string xsdSchemaPath)
         {
-            _originalXsdSchema = ResourceHelpers.LoadXmlSchemaTestData(xsdSchemaPath);
+            OriginalXsdSchema = ResourceHelpers.LoadXmlSchemaTestData(xsdSchemaPath);
             return this;
         }
 
         private Seres2JsonSchema2SeresTests LoadedXsdSchemaConvertedToJsonSchema()
         {
             var xsdToJsonConverter = new XmlSchemaToJsonSchemaConverter();
-            _convertedJsonSchema = xsdToJsonConverter.Convert(_originalXsdSchema);
+            ConvertedJsonSchema = xsdToJsonConverter.Convert(OriginalXsdSchema);
             return this;
         }
 
         private Seres2JsonSchema2SeresTests ConvertedJsonSchemaConvertedToXsdSchema()
         {
             var jsonToXsdConverter = new JsonSchemaToXmlSchemaConverter(new JsonSchemaNormalizer());
-            _convertedXsdSchema = jsonToXsdConverter.Convert(_convertedJsonSchema);
+            ConvertedXsdSchema = jsonToXsdConverter.Convert(ConvertedJsonSchema);
             return this;
         }
 
-       // Assertion methods
+        private Seres2JsonSchema2SeresTests SchemasSerializedToString()
+        {
+            OriginalXsdSchemaString = Serialize(OriginalXsdSchema).Result;
+            ConvertedXsdSchemaString = Serialize(ConvertedXsdSchema).Result;
+            ConvertedJsonSchemaString = JsonSerializer.Serialize(ConvertedJsonSchema, new JsonSerializerOptions
+            {
+                Encoder =
+                    JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Latin1Supplement),
+                WriteIndented = true
+            });
+            return this;
+        }
+
+        // Assertion methods
         private Seres2JsonSchema2SeresTests OriginalAndConvertedXsdSchemasShouldBeEquivalent()
         {
-            XmlSchemaAssertions.IsEquivalentTo(_originalXsdSchema, _convertedXsdSchema);
+            XmlSchemaAssertions.IsEquivalentTo(OriginalXsdSchema, ConvertedXsdSchema);
             return this;
         }
 
@@ -128,8 +242,8 @@ namespace DataModeling.Tests
             {
                 // The XML should validate against both XSD's
                 var xml = ResourceHelpers.LoadTestDataAsString(xmlPath);
-                Assert.True(ValidateXml(_originalXsdSchema, xml));
-                Assert.True(ValidateXml(_convertedXsdSchema, xml));
+                Assert.True(ValidateXml(OriginalXsdSchema, xml));
+                Assert.True(ValidateXml(ConvertedXsdSchema, xml));
             }
 
             return this;

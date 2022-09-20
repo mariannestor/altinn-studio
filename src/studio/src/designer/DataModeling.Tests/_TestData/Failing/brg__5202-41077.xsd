@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.17" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2016-07-01T12:12:01.4+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/Broennoeysundregistrene/RegisterForOffentligStoette_M/2016" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="Broennoeysundregistrene" />
+      <xsd:attribute name="modellnavn" fixed="RegisterForOffentligStoette_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.1" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="RegisterForOffentligStoette_M" />
+  <xsd:complexType name="RegisterForOffentligStoette_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Meldingsmodell/RegisterForOffentligStøtte_M/623350">
+    <xsd:sequence>
+      <xsd:element name="Skjemainnhold" type="Skjemainnhold" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Meldingsdel/Skjemainnhold/623318" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="5202" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="41077" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Skjemainnhold" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Meldingsdel/Skjemainnhold/623318">
+    <xsd:sequence>
+      <xsd:element name="spraak" type="Spraak" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/språk/626573" />
+      <xsd:element name="stoettegiver" type="Stoettegiver" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/støttegiver/623317" />
+      <xsd:element name="stoettemottaker" type="Stoettemottaker" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/støttemottaker/623316" />
+      <xsd:element name="stoettetildeling" type="Stoettetildeling" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/støttetildeling/623315" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Spraak" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/Språk/626572">
+    <xsd:sequence>
+      <xsd:element name="spraakKode" type="Tekst3" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/språkKode/626571" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Stoettegiver" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/Støttegiver/623348">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/organisasjonsnummer/623347" />
+      <xsd:element name="navn" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/navn/627771" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Stoettemottaker" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/Støttemottaker/623346">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/organisasjonsnummer/623345" />
+      <xsd:element name="navnStoettemottaker" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/navnStøttemottaker/627770" />
+      <xsd:element name="organisasjonsnummerOperativStoettemottaker" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/organisasjonsnummerOperativStøttemottaker/623344" />
+      <xsd:element name="navnOrgnummerOperativStoettemottaker" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/navnOrgnummerOperativStøttemottaker/627769" />
+      <xsd:element name="navnOperativStoettemottaker" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/navnOperativStøttemottaker/623343" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Stoettetildeling" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/Støttetildeling/623342">
+    <xsd:sequence>
+      <xsd:element name="esaID" type="Tekst255" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/esaID/623341" />
+      <xsd:element name="stoettetiltakNavn" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støttetiltakNavn/623340" />
+      <xsd:element name="stoetteordningID" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støtteordningID/623651" />
+      <xsd:element name="tiltakstype" type="Tekst4" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/tiltakstype/623339" />
+      <xsd:element name="tildelingsdato" type="Dato" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/tildelingsdato/623338" />
+      <xsd:element name="stoettemottakerStoerrelse" type="Tekst4" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støttemottakerStørrelse/623337" />
+      <xsd:element name="stoettemottakerStoerrelseBeskrivelse" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støttemottakerStørrelseBeskrivelse/627768" />
+      <xsd:element name="stoetteinstrument" type="Tekst4" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støtteinstrument/623336" />
+      <xsd:element name="stoetteinstrumentBeskrivelse" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støtteinstrumentBeskrivelse/627774" />
+      <xsd:element name="stoetteinstrumentAnnet" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/støtteinstrumentAnnet/623335" />
+      <xsd:element name="naeringssektor" type="Tekst4" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/næringssektor/623334" />
+      <xsd:element name="naeringssektorBeskrivelse" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/næringssektorBeskrivelse/627766" />
+      <xsd:element name="tildeltStoette" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/tildeltStøtte/623333">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="TildeltStoette" />
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="region" type="Short" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/region/623332" />
+      <xsd:element name="regionNavn" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/regionNavn/627773" />
+      <xsd:element name="formaal" type="Formaal" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Relasjonsegenskap/formål/623331" />
+      <xsd:element name="referanseStoettegiver" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/referanseStøttegiver/625802" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TildeltStoette" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/TildeltStøtte/623330">
+    <xsd:sequence>
+      <xsd:element name="tildeltBeloep" type="Desimal" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/tildeltBeløp/623329" />
+      <xsd:element name="laanGarantiRisikoBeloep" type="Desimal" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/lånGarantiRisikoBeløp/623328" />
+      <xsd:element name="beloepIntervall" type="BeloepInterval" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/beløpIntervall/624007" />
+      <xsd:element name="valuta" type="Valuta" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/valuta/623326" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BeloepInterval" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Datakomplekstype/BeløpInterval/624010">
+    <xsd:sequence>
+      <xsd:element name="beloepFra" type="Desimal" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/DataTypeegenskap/beløpFra/624009" />
+      <xsd:element name="beloepTil" type="Desimal" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/DataTypeegenskap/beløpTil/624008" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Formaal" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataobjekttype/Formål/623325">
+    <xsd:sequence>
+      <xsd:element name="rettsligGrunnlag" type="Tekst4" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/rettsligGrunnlag/623324" />
+      <xsd:element name="rettsligGrunnlagBeskrivelse" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/rettsligGrunnlagBeskrivelse/627764" />
+      <xsd:element name="formaalkode" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/formål/623323" />
+      <xsd:element name="formaalBeskrivelse" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/formålBeskrivelse/627763" />
+      <xsd:element name="formaalAnnet" type="Tekst255" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataegenskap/formålAnnet/623322" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tekst3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Tekst3/626575">
+    <xsd:restriction base="RestriksjonTekst3" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonTekst3" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Tegnrestriksjon/RestriksjonTekst3/626574">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="3" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Organisasjonsnummer/5740">
+    <xsd:restriction base="RestriksjonOrganisasjonsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonOrganisasjonsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Tegnrestriksjon/RestriksjonOrganisasjonsnummer/572025">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst255" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Tekst256/624002">
+    <xsd:restriction base="RestriksjonTekst255" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonTekst255" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Tegnrestriksjon/RestriksjonTekst256/624000">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Tall/446388">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst4" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Tekst4/624001">
+    <xsd:restriction base="RestriksjonTekst4" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonTekst4" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Tegnrestriksjon/RestriksjonTekst4/623999">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dato" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Dato/5730">
+    <xsd:restriction base="xsd:date" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Desimal" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Desimal/608780">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Valuta" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Datakodeliste/Valuta/623654">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NOK" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Datakodeelement/NOK/623653" />
+      <xsd:enumeration value="EUR" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Datakodeelement/EUR/623652" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Short" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Brønnøysundregistrene/Dataenkeltype/Short/624003">
+    <xsd:restriction base="xsd:short" />
+  </xsd:simpleType>
+</xsd:schema>

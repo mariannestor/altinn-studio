@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.13" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2015-06-25T11:20:26.412+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/Helsedirektoratet/RapporteringTilskudd_M/2015" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="Helsedirektoratet" />
+      <xsd:attribute name="modellnavn" fixed="RapporteringTilskudd_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="særnorske-bokstaver-i-navn" fixed="true" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="språk" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn" />
+      <xsd:attribute name="XSD-transformatorversjon" fixed="1.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="RapporteringTilskudd_M" />
+  <xsd:complexType name="RapporteringTilskudd_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/Helsedirektoratet/Meldingsmodell/RapporteringTilskudd_M/481260">
+    <xsd:sequence>
+      <xsd:element name="Innsender" type="Innsender" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Helsedirektoratet/Meldingsdel/Innsender/481169" />
+      <xsd:element name="RapporteringTilskudd" type="RapporteringTilskudd" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Helsedirektoratet/Meldingsdel/RapporteringTilskudd/481167" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="3431" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="39110" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Innsender" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Helsedirektoratet/Meldingsdel/Innsender/481169">
+    <xsd:sequence>
+      <xsd:element name="enhet" type="Enhet" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/enhet/481168" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Enhet" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Enhet/481255">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/organisasjonsnummer/481254" />
+      <xsd:element name="organisasjonsnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/organisasjonsnavn/481253" />
+      <xsd:element name="adresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/adresse/481252" />
+      <xsd:element name="epostadresse" type="EPost" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/epostadresse/481251" />
+      <xsd:element name="webadresse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/webadresse/481250" />
+      <xsd:element name="organisasjonsform" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/organisasjonsform/481249" />
+      <xsd:element name="kommune" type="Kommune" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/kommune/481245" />
+      <xsd:element name="kopiadresse" type="Kopiadresse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/kopiadresse/487931" />
+      <xsd:element name="kontaktperson" type="Kontaktperson" nillable="true" minOccurs="0" maxOccurs="5" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/kontaktperson/481242" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Adresse" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakomplekstype/Adresse/468566">
+    <xsd:sequence>
+      <xsd:element name="adresse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/DataTypeegenskap/adresse/468565" />
+      <xsd:element name="postnummer" type="Postnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/DataTypeegenskap/postnummer/468564" />
+      <xsd:element name="poststed" type="Poststed" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/DataTypeegenskap/poststed/468563" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kommune" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakomplekstype/Kommune/472407">
+    <xsd:sequence>
+      <xsd:element name="kommunenummer" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/DataTypeegenskap/kommunenummer/472406" />
+      <xsd:element name="kommune" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/DataTypeegenskap/kommunenavn/472405" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kopiadresse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Kopiadresse/487930">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnavn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/organisasjonsnavn/487929" />
+      <xsd:element name="adresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/adresse/487928" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/land/487927" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktperson" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/KopiAdresse/481231">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/fornavn/481229" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/etternavn/481228" />
+      <xsd:element name="landkodeTelefon" type="LandkodeTelefon" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/landkodeTelefon/481224" />
+      <xsd:element name="telefonnummer" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/telefonnummer/481223" />
+      <xsd:element name="epostadresse" type="EPost" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/epostadresse/481222" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RapporteringTilskudd" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Helsedirektoratet/Meldingsdel/RapporteringTilskudd/481167">
+    <xsd:sequence>
+      <xsd:element name="person" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/person/483221" />
+      <xsd:element name="harSamarbeidspartnere" type="HarSamarbeidspartnere" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/harSamarbeidspartnere/481266" />
+      <xsd:element name="samarbeidspartnere" type="Samarbeidspartnere" nillable="true" minOccurs="0" maxOccurs="15" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/samarbeidspartnere/481265" />
+      <xsd:element name="informasjonSamarbeid" type="InformasjonSamarbeid" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/informasjonSamarbeid/482370" />
+      <xsd:element name="tilskuddsordning" type="Tilskuddsordning" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/tilskuddsordning/481264" />
+      <xsd:element name="rapporteringMåloppnåelse" type="RapporteringMåloppnåelse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/rapporteringMåloppnåelse/481288" />
+      <xsd:element name="statusFremdrift" type="StatusFremdrift" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/statusFremdrift/483890" />
+      <xsd:element name="budsjettInntekter" type="BudsjettInntekter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/budsjettInntekter/481275" />
+      <xsd:element name="budsjettUtgifter" type="BudsjettUtgifter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/budsjettUtgifter/481274" />
+      <xsd:element name="nettoBudsjett" type="NettoBudsjett" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/nettoBudsjett/481273" />
+      <xsd:element name="revisoruttalelse" type="Revisoruttalelse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/revisoruttalelse/481272" />
+      <xsd:element name="vedlegg" type="Vedlegg" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/vedlegg/483295" />
+      <xsd:element name="godkjenner" type="Godkjenner" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/godkjenner/481271" />
+      <xsd:element name="budsjett1" type="Budsjett1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/budsjett1/593813" />
+      <xsd:element name="budsjett2" type="Budsjett2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/budsjett2/593812" />
+      <xsd:element name="budsjett3" type="Budsjett3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/budsjett3/593811" />
+      <xsd:element name="ønskerKopiAvBrev" type="ØnskerKopiAvBrev" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/ønskerKopiAvBrev/487934" />
+      <xsd:element name="preutfylt" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/preutfylt/605758" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Person" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Person/483225">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/fornavn/483224" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/etternavn/483223" />
+      <xsd:element name="fødselsdato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/fødselsdato/483222" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HarSamarbeidspartnere" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/HarSamarbeidspartnere/481263">
+    <xsd:sequence>
+      <xsd:element name="alternativHarSamarbeidspartnere" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/alternativHarSamarbeidspartnere/481262" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Samarbeidspartnere" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Samarbeidspartnere/481235">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/organisasjonsnavn/481234" />
+      <xsd:element name="kommunenummer" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/kommunenummer/481233" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InformasjonSamarbeid" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/InformasjonSamarbeid/482369">
+    <xsd:sequence>
+      <xsd:element name="informasjonOmSamarbeidet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/informasjonOmSamarbeidet/482368" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Tilskuddsordning" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Tilskuddsordning/481221">
+    <xsd:sequence>
+      <xsd:element name="rapporteringsår" type="År" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/søknadsår/481220" />
+      <xsd:element name="rapporteringstype" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/rapporteringstype/481269" />
+      <xsd:element name="rapporteringsperiodeFra" type="Dato" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/rapporteringsperiodeFra/481268" />
+      <xsd:element name="rapporteringsperiodeTil" type="Dato" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/rapporteringsperiodeTil/481267" />
+      <xsd:element name="helsedirektoratetsReferanse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/helsedirektoratetsReferanse/481218" />
+      <xsd:element name="temaForTilskuddsordning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/temaForTilskuddsordning/481217" />
+      <xsd:element name="tilskuddsordning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/tilskuddsordning/481216" />
+      <xsd:element name="soktAndreTilskudd" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/soktAndreTilskudd/598937" />
+      <xsd:element name="soktAndreTilskuddNavn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/soktAndreTilskuddNavn/598936" />
+      <xsd:element name="prosjektreferanse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/prosjektreferanse/606909" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RapporteringMåloppnåelse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Prosjektbeskrivelse/481214">
+    <xsd:sequence>
+      <xsd:element name="tittel" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/tittel/481213" />
+      <xsd:element name="måloppnåelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/prosjektbeskrivelse/481212" />
+      <xsd:element name="målForOrdningen" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/målForOrdningen/606908" />
+      <xsd:element name="annenRapportering" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/bakgrunn/481209" />
+      <xsd:element name="rapporteringskrav" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/rapporteringskrav/606915" />
+      <xsd:element name="forklaringTilRapporteringskrav" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/forklaringTilRapporteringskrav/606914" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StatusFremdrift" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/StatusFremdrift/483891">
+    <xsd:sequence>
+      <xsd:element name="statusFremdriftplanMåloppnåelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/målFremtid/481210" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BudsjettInntekter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/BudsjettInntekter/481200">
+    <xsd:sequence>
+      <xsd:element name="tilskuddsbeløp" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/søknadsbeløp/481199" />
+      <xsd:element name="egenfinansiering" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/egenfinansiering/481197" />
+      <xsd:element name="sumInntekter" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumInntekter/481194" />
+      <xsd:element name="sumInntekterSV3" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumInntekterSV3/481310" />
+      <xsd:element name="andreInntekterAndreKilder" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/inntekterAndreKilder/481192" />
+      <xsd:element name="andreInntekterEgenfinansiering" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/andreInntekterEgenfinansiering/481193" />
+      <xsd:element name="andreStatligeTilskudd" type="AndreStatligeTilskudd" nillable="true" minOccurs="0" maxOccurs="5" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/andreStatligeTilskudd/481311" />
+      <xsd:element name="andreInntekstskilder" type="AndreInntektskilder" nillable="true" minOccurs="0" maxOccurs="5" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/andreInntekstskilder/481195" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AndreStatligeTilskudd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/AndreStatligeTilskudd/481306">
+    <xsd:sequence>
+      <xsd:element name="spesifiser" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/spesifiser/481305" />
+      <xsd:element name="beløp" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/beløp/481304" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AndreInntektskilder" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/AndreInntektskilder/481162">
+    <xsd:sequence>
+      <xsd:element name="spesifiser" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/bidragsyter/481161" />
+      <xsd:element name="beløp" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/beløp/481159" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BudsjettUtgifter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/BudsjettUtgifter/481187">
+    <xsd:sequence>
+      <xsd:element name="lønnsutgifterSosialeUtgifter" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/lønnsutgifterSosialeUtgifter/481186" />
+      <xsd:element name="reiseArrangementMøterKonferanseUtgifter" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/reiseArrangementMøterKonferanseUtgifter/481185" />
+      <xsd:element name="konsulenttjenester" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/konsulenttjenester/481184" />
+      <xsd:element name="trykkingPublikasjoner" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/trykkingPublikasjoner/481183" />
+      <xsd:element name="investeringerInventarUtstyr" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/investeringerInventarUtstyr/481182" />
+      <xsd:element name="driftsutgifterForbruksmatriell" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/driftsutgifterForbruksmatriell/481181" />
+      <xsd:element name="sumUtgifter" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumUtgifter/481178" />
+      <xsd:element name="andreUtgifter" type="AndreUtgifter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Relasjonsegenskap/andreUtgifter/481284" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AndreUtgifter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/AndreUtgifter/481283">
+    <xsd:sequence>
+      <xsd:element name="andreUtgifterSpesifiser" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/andreUtgifterSpesifiser/481180" />
+      <xsd:element name="andreUtgifterBeløp" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/andreUtgifter/481179" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NettoBudsjett" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/NettoBudsjett/481177">
+    <xsd:sequence>
+      <xsd:element name="sumInntekterSV1" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/søknadsbeløpInkludertUbruktTilskudd/481176" />
+      <xsd:element name="sumInntekterSV2" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumInntekter/481175" />
+      <xsd:element name="sumInntekterSV3" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumInntekterSV3/481309" />
+      <xsd:element name="sumUtgifter" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sumUtgifter/481174" />
+      <xsd:element name="nettoSV1" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/ubruktTilskudd/481198" />
+      <xsd:element name="nettoSV2" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/nettoSV2/481308" />
+      <xsd:element name="nettoSV3" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/nettoSV3/481307" />
+      <xsd:element name="ubruktTilskudd" type="Beløp" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/ubruktTilskudd/598927" />
+      <xsd:element name="kommentarTilubruktTilskudd" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/kommentarTilubruktTilskudd/481289" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Revisoruttalelse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Revisoruttalelse/481282">
+    <xsd:sequence>
+      <xsd:element name="revisorvedlegg" type="RevisorVedlegg" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/revisorvedlegg/481281" />
+      <xsd:element name="kommentarRevisoruttalelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/kommentarRevisoruttalelse/481280" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Vedlegg" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Vedlegg/481166">
+    <xsd:sequence>
+      <xsd:element name="vedleggRevisoruttalelse" type="VedleggRevisoruttalelse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/vedleggFullstendigOrgoversikt/481165" />
+      <xsd:element name="vedleggTillegsinformasjon" type="VedleggTillegsinformasjon" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/vedleggTillegsinformasjon/481164" />
+      <xsd:element name="vedleggEvtAndre" type="VedleggEvtAndre" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/vedleggXx/481163" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Godkjenner" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/Godkjenner/481279">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/fornavn/481278" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/etternavn/481277" />
+      <xsd:element name="tittelRolle" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/tittelRolle/481276" />
+      <xsd:element name="sendVedtakElektronisk" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/sendVedtakElektronisk/598935" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Budsjett1" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakomplekstype/Budsjett1/593816">
+    <xsd:sequence />
+  </xsd:complexType>
+  <xsd:complexType name="Budsjett2" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakomplekstype/Budsjett2/593815">
+    <xsd:sequence />
+  </xsd:complexType>
+  <xsd:complexType name="Budsjett3" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakomplekstype/Budsjett3/593814">
+    <xsd:sequence />
+  </xsd:complexType>
+  <xsd:complexType name="ØnskerKopiAvBrev" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataobjekttype/ØnskerKopiAvBrev/487933">
+    <xsd:sequence>
+      <xsd:element name="ønskerKopiAvBrev" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataegenskap/ønkserKopiAvBrev/487932" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Organisasjonsnummer/468569">
+    <xsd:restriction base="RestriksjonOrganisasjonsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonOrganisasjonsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Helsedirektoratet/Tegnrestriksjon/RestriksjonOrganisasjonsnummer/592142">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Navn/468562">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Tekst/468561">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Postnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Postnummer/468560">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Poststed" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Poststed/468553">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="EPost" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/EPost/468567">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="LandkodeTelefon" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/LandkodeTelefon/479510">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Telefonnummer/468556">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Alternativ" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Alternativ/468549">
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Tall/468557">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="År" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/År/468559">
+    <xsd:restriction base="xsd:gYear" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Rapporteringstype" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeutvalg/Rapporteringstype/481270">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="årsSluttrapport" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/årsSluttrapport/591833" />
+      <xsd:enumeration value="statusRapport" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/statusrapport/591832" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dato" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Dato/468558">
+    <xsd:restriction base="xsd:date" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Beløp" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Helsedirektoratet/Dataenkeltype/Beløp/468568">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RevisorVedlegg" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeutvalg/RevisorVedlegg/481285">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="revisoruttalelseUtenMerknader" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/revisoruttalelseUtenMerknader/591831" />
+      <xsd:enumeration value="revisoruttalelseMedMerknader" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/revisoruttalelseMedMerknader/591830" />
+      <xsd:enumeration value="ingenKravOmrevisoruttalelse" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/ingenKravOmrevisoruttalelse/591829" />
+      <xsd:enumeration value="revisoruttalelseMangler" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/revisoruttalelseMangler/591828" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VedleggRevisoruttalelse" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeutvalg/VedleggFullstendigOrgoversikt/481258">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="elektronisk" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/elektronisk/591839" />
+      <xsd:enumeration value="post" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/post/591838" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VedleggTillegsinformasjon" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeutvalg/VedleggTillegsinformasjon/481257">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="elektronisk" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/elektronisk/591837" />
+      <xsd:enumeration value="post" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/post/591836" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VedleggEvtAndre" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeutvalg/VedleggXX/481256">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="elektronisk" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/elektronisk/591835" />
+      <xsd:enumeration value="post" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Helsedirektoratet/Datakodeelement/post/591834" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema targetNamespace="http://seres.no/xsd/Fiskeridirektoratet/FD-0001MånedsrapportBiomasseLakselus_M/2012" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://seres.no/xsd/Fiskeridirektoratet/FD-0001MånedsrapportBiomasseLakselus_M/2012">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2021-01-05T14:43:09.342+01:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/Fiskeridirektoratet/FD-0001MaanedsrapportBiomasseLakselus_M/2021" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="Fiskeridirektoratet" />
+      <xsd:attribute name="modellnavn" fixed="FD-0001MaanedsrapportBiomasseLakselus_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="FD-0001MaanedsrapportBiomasseLakselus_M" />
+  <xsd:complexType name="FD-0001MaanedsrapportBiomasseLakselus_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Meldingsmodell/FD-0001MånedsrapportBiomasseLakselus_M/6179">
+    <xsd:sequence>
+      <xsd:element name="Oppgave_FD-0001" type="Oppgave_FD-0001" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Meldingsdel/Oppgave_FD-0001/6187" />
+      <xsd:element name="Skjemainnhold_FD-0001" type="Skjemainnhold_FD-0001" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Meldingsdel/Skjemainnhold_FD-0001/6188" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="6107" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="46232" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Oppgave_FD-0001" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Meldingsdel/Oppgave_FD-0001/6187">
+    <xsd:sequence>
+      <xsd:element name="aar" type="AAr" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/år/6355" />
+      <xsd:element name="rapporteringsmaaned" type="Maaned" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/rapporteringsmåned/6356" />
+      <xsd:element name="fagsystem" type="Tekst50" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/fagsystem/483220" />
+      <xsd:element name="innsender" type="Innsender" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/innsender/13752" />
+      <xsd:element name="selskap" type="Selskap" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/selskap/6280" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Innsender" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Innsender/13749">
+    <xsd:sequence>
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/navn/13758" />
+      <xsd:element name="epost" type="Epost" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/epost/13759" />
+      <xsd:element name="mobilnummer" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/mobilnummer/13760" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Selskap" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Selskap/6238">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/organisasjonsnummer/6357" />
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/navn/6358" />
+      <xsd:element name="lokalitet" type="Lokalitet" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/lokalitet/6281" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Lokalitet" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Lokalitet/6239">
+    <xsd:sequence>
+      <xsd:element name="nummer" type="Heltall5" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/nummer/6359" />
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/navn/6360" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Skjemainnhold_FD-0001" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Meldingsdel/Skjemainnhold_FD-0001/6188">
+    <xsd:sequence>
+      <xsd:element name="biomasse" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/biomasse/6290">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Biomasse">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="oppdrettsanlegg" type="Oppdrettsanlegg" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/oppdrettsanlegg/6291" />
+      <xsd:element name="fiskebestand" type="FiskebestandenIOppdrettsanlegget" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/fiskebestand/6292" />
+      <xsd:element name="merknad" type="Merknad" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/merknad/6294" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Biomasse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Biomasse/6247">
+    <xsd:sequence>
+      <xsd:element name="merd" type="Merd" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/merd/6282" />
+      <xsd:element name="fiskebestandPrMerd" type="FiskebestandPrMerd" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/fiskebestandPrMerd/6283" />
+      <xsd:element name="fisketapPrMerd" type="FisketapPrMerd" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/fisketapPrMerd/6284" />
+      <xsd:element name="fiskeuttakPrMerd" type="FiskeuttakPrMerd" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/fiskeuttakPrMerd/6285" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Merd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Merd/6243">
+    <xsd:sequence>
+      <xsd:element name="ID" type="Tekst8" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/ID/6366" />
+      <xsd:element name="volum" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/volum/6367" />
+      <xsd:element name="fôrforbruk" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/fôrforbruk/6368" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FiskebestandPrMerd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/FiskebestandPrMerd/6245">
+    <xsd:sequence>
+      <xsd:element name="fiskeart" type="Fiskeart" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/fiskeart/6372" />
+      <xsd:element name="aarsklasse" type="AAr" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/årsklasse/6373" />
+      <xsd:element name="utsattSisteMaaned" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/utsattSisteMåned/6374" />
+      <xsd:element name="totalbeholdning" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/totalbeholdning/6375" />
+      <xsd:element name="snittvekt" type="Heltall6" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/snittvekt/6376" />
+      <xsd:element name="tellefeil" type="Heltall7_01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/tellefeil/6377" />
+      <xsd:element name="fiskegruppenummer" type="Tekst20" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/fiskegruppenummer/6378" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FisketapPrMerd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/FisketapPrMerd/6246">
+    <xsd:sequence>
+      <xsd:element name="doed" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/død/6379" />
+      <xsd:element name="utkast" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/utkast/6380" />
+      <xsd:element name="roemt" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/rømt/6381" />
+      <xsd:element name="uforklarlig" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/uforklarlig/6382" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FiskeuttakPrMerd" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/FiskeuttakPrMerd/6244">
+    <xsd:sequence>
+      <xsd:element name="antall" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/antall/6369" />
+      <xsd:element name="totalvekt" type="Heltall7091" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/totalvekt/6370" />
+      <xsd:element name="uttakstype" type="Fiskeuttak" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/uttakstype/6371" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Oppdrettsanlegg" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Oppdrettsanlegg/6249">
+    <xsd:sequence>
+      <xsd:element name="brakklegging" type="Tidspunkt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/brakklegging/6385" />
+      <xsd:element name="fôrtype" type="Fôrtype" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/fôrtype/6386" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FiskebestandenIOppdrettsanlegget" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/FiskebestandenIOppdrettsanlegget/6250">
+    <xsd:sequence>
+      <xsd:element name="flyttetTil" type="NyLokalitet" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Relasjonsegenskap/flyttetTil/6286" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NyLokalitet" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/NyLokalitet/6251">
+    <xsd:sequence>
+      <xsd:element name="nummer" type="Tekst50" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/nummer/6387" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Merknad" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataobjekttype/Merknad/6248">
+    <xsd:sequence>
+      <xsd:element name="merknad" type="Merknader" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataegenskap/merknad/6383" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="AAr" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/År/6415">
+    <xsd:restriction base="xsd:gYear" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Maaned" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeutvalg/Måned/6439">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1/501014" />
+      <xsd:enumeration value="2" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2/501013" />
+      <xsd:enumeration value="3" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/3/501012" />
+      <xsd:enumeration value="4" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/4/501011" />
+      <xsd:enumeration value="5" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/5/501010" />
+      <xsd:enumeration value="6" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/6/501009" />
+      <xsd:enumeration value="7" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/7/501008" />
+      <xsd:enumeration value="8" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/8/501007" />
+      <xsd:enumeration value="9" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/9/501006" />
+      <xsd:enumeration value="10" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/10/501005" />
+      <xsd:enumeration value="11" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/11/501004" />
+      <xsd:enumeration value="12" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/12/501003" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst50" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Tekst50/13685">
+    <xsd:restriction base="Tekst50_Tekst50Verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst50_Tekst50Verdi" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst50/501365">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="50" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Navn/6408">
+    <xsd:restriction base="Navn_Tekst175" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn_Tekst175" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst175/501373">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="175" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Epost/6400">
+    <xsd:restriction base="Epost_Tekst100" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost_Tekst100" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst100/501377">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Telefonnummer/6411">
+    <xsd:restriction base="Telefonnummer_Tekst88" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer_Tekst88" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst88/501379">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Organisasjonsnummer/6405">
+    <xsd:restriction base="Organisasjonsnummer_Tekst99Modulus11" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer_Tekst99Modulus11" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst99Modulus11/501371">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall5" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Heltall5/6418">
+    <xsd:restriction base="Heltall5_Heltall55" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall5_Heltall55" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tallrestriksjon/Heltall55/501395">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst8" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Tekst8/6421">
+    <xsd:restriction base="Tekst8_Tekst8verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst8_Tekst8verdi" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst8/501375">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall7091" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Heltall7091/13687">
+    <xsd:restriction base="Heltall7091_Heltall7091verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall7091_Heltall7091verdi" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tallrestriksjon/Heltall7091/501388">
+    <xsd:restriction base="xsd:integer">
+      <xsd:pattern value="[0-9]{1,}" />
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Fiskeart" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeutvalg/Fiskeart/6443">
+    <xsd:restriction base="xsd:integer">
+      <xsd:enumeration value="071101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/071101/501086" />
+      <xsd:enumeration value="071301" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/071301/501085" />
+      <xsd:enumeration value="071401" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/071401/501084" />
+      <xsd:enumeration value="071601" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/071601/501083" />
+      <xsd:enumeration value="081101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/081101/501082" />
+      <xsd:enumeration value="102205" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/102205/501081" />
+      <xsd:enumeration value="102705" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/102705/501080" />
+      <xsd:enumeration value="103201" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/103201/501079" />
+      <xsd:enumeration value="171101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/171101/501078" />
+      <xsd:enumeration value="171201" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/171201/501077" />
+      <xsd:enumeration value="231101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/231101/501076" />
+      <xsd:enumeration value="235401" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/235401/501075" />
+      <xsd:enumeration value="1691" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1691/501074" />
+      <xsd:enumeration value="1693" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1693/501073" />
+      <xsd:enumeration value="2313" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2313/501072" />
+      <xsd:enumeration value="1713" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1713/501071" />
+      <xsd:enumeration value="2411" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2411/501069" />
+      <xsd:enumeration value="0615" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0615/501068" />
+      <xsd:enumeration value="1021" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1021/501067" />
+      <xsd:enumeration value="1697" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1697/501066" />
+      <xsd:enumeration value="1647" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1647/501065" />
+      <xsd:enumeration value="1696" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1696/501064" />
+      <xsd:enumeration value="1694" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1694/501063" />
+      <xsd:enumeration value="1623" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1623/501062" />
+      <xsd:enumeration value="0821" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0821/501061" />
+      <xsd:enumeration value="1039" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1039/501060" />
+      <xsd:enumeration value="2101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2101/501059" />
+      <xsd:enumeration value="1023" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1023/501058" />
+      <xsd:enumeration value="2110" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2110/501057" />
+      <xsd:enumeration value="1222" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1222/501056" />
+      <xsd:enumeration value="0751" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0751/501055" />
+      <xsd:enumeration value="2318" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2318/501054" />
+      <xsd:enumeration value="2204" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2204/501053" />
+      <xsd:enumeration value="1034" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1034/501052" />
+      <xsd:enumeration value="1051" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1051/501051" />
+      <xsd:enumeration value="2013" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2013/501050" />
+      <xsd:enumeration value="1115" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1115/501049" />
+      <xsd:enumeration value="1041" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1041/501048" />
+      <xsd:enumeration value="0412" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0412/501047" />
+      <xsd:enumeration value="0512" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0512/501046" />
+      <xsd:enumeration value="2221" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2221/501045" />
+      <xsd:enumeration value="2312" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2312/501043" />
+      <xsd:enumeration value="2111" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2111/501042" />
+      <xsd:enumeration value="0611" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/0611/501041" />
+      <xsd:enumeration value="2319" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2319/501040" />
+      <xsd:enumeration value="2352" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2352/501039" />
+      <xsd:enumeration value="3011" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/3011/501038" />
+      <xsd:enumeration value="2314" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2314/501037" />
+      <xsd:enumeration value="1812" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1812/501036" />
+      <xsd:enumeration value="2203" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2203/501035" />
+      <xsd:enumeration value="1111" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1111/501034" />
+      <xsd:enumeration value="1221" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1221/501033" />
+      <xsd:enumeration value="1815" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1815/501032" />
+      <xsd:enumeration value="2105" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2105/501031" />
+      <xsd:enumeration value="1611" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1611/501030" />
+      <xsd:enumeration value="2102" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2102/501029" />
+      <xsd:enumeration value="1112" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1112/501028" />
+      <xsd:enumeration value="2341" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2341/501027" />
+      <xsd:enumeration value="2202" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2202/501026" />
+      <xsd:enumeration value="2231" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2231/501025" />
+      <xsd:enumeration value="169101" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169101/661629" />
+      <xsd:enumeration value="169301" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169301/661628" />
+      <xsd:enumeration value="169501" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169501/661627" />
+      <xsd:enumeration value="169701" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169701/661626" />
+      <xsd:enumeration value="169601" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169601/661625" />
+      <xsd:enumeration value="169401" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/169401/661624" />
+      <xsd:enumeration value="222130" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/222130/661623" />
+      <xsd:enumeration value="1695" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1695/662025" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall6" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Heltall6/13688">
+    <xsd:restriction base="Heltall6_Heltall6verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall6_Heltall6verdi" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tallrestriksjon/Heltall6/501392">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall7_01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Heltall7_01/13689">
+    <xsd:restriction base="Heltall7_01_Heltall7_01verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall7_01_Heltall7_01verdi" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tallrestriksjon/Heltall7_01/501387">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst20" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Tekst20/13690">
+    <xsd:restriction base="Tekst20_Tekst20verdi" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst20_Tekst20verdi" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Tegnrestriksjon/Tekst20/501369">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="20" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Fiskeuttak" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeutvalg/Fiskeuttak/6441">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1/501019" />
+      <xsd:enumeration value="2" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2/501018" />
+      <xsd:enumeration value="3" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/3/501017" />
+      <xsd:enumeration value="4" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/4/501016" />
+      <xsd:enumeration value="5" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/5/501015" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tidspunkt" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Tidspunkt/6412">
+    <xsd:restriction base="xsd:date" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Fôrtype" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeutvalg/Fôrtype/6442">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/1/501024" />
+      <xsd:enumeration value="2" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/2/501023" />
+      <xsd:enumeration value="3" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/3/501022" />
+      <xsd:enumeration value="4" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/4/501021" />
+      <xsd:enumeration value="5" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Datakodeelement/5/501020" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Merknader" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Fiskeridirektoratet/Dataenkeltype/Merknad/6417">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.17" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2016-10-04T09:05:54.711+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/StatensLegemiddelverk/Konsesjonsoppslag_M/2016" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="StatensLegemiddelverk" />
+      <xsd:attribute name="modellnavn" fixed="Konsesjonsoppslag_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.1" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="Konsesjonsoppslag_M" />
+  <xsd:complexType name="Konsesjonsoppslag_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsmodell/Konsesjonsoppslag_M/631289">
+    <xsd:sequence>
+      <xsd:element name="InnrapporterteData" type="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsdel//631292" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="5404" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="41299" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsdel//631292">
+    <xsd:sequence>
+      <xsd:element name="konsesjonsnummerliste" type="Konsesjonsnummerliste" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/konsesjonsnummerliste/631291" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Konsesjonsnummerliste" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/Konsesjonsnummerliste/631287">
+    <xsd:sequence>
+      <xsd:element name="konsesjonsnummer" type="Tekst" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/konsesjonsnummer/631286" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/Tekst/474237">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+</xsd:schema>

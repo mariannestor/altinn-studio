@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2021-06-28T21:19:53.357+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/NSM/ePOB_M/2021" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="NSM" />
+      <xsd:attribute name="modellnavn" fixed="ePOB_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="ePOB_M" />
+  <xsd:complexType name="ePOB_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/NSM/Meldingsmodell/ePOB_M/768896">
+    <xsd:sequence>
+      <xsd:element name="Skjemainnhold" type="Skjemainnhold" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/NSM/Meldingsdel/Skjemainnhold/768911" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="6244" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="46571" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Skjemainnhold" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/NSM/Meldingsdel/Skjemainnhold/768911">
+    <xsd:sequence>
+      <xsd:element name="personInformasjon" type="Personalia" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/person/768910" />
+      <xsd:element name="straff" type="Strafferettslig" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/strafferettslig/769139" />
+      <xsd:element name="personrelasjoner" type="Relasjoner" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/relasjoner/769207" />
+      <xsd:element name="personligokonomi" type="OEkonomi" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/økonomi/769255" />
+      <xsd:element name="personrusmidler" type="Rusmidler" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/rusmidler/769283" />
+      <xsd:element name="sikkerhetsopplysninger" type="SikkerhetsOpplysninger" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/sikkerhetsOpplysninger/769300" />
+      <xsd:element name="helseperson" type="Helse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/helse/769282" />
+      <xsd:element name="arbeidserfaring" type="Arbeidserfaringer" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/arbeidserfaring/780036" />
+      <xsd:element name="statstilknytning" type="StatsTilknytninger" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/PersonStatsTilknytning/784873" />
+      <xsd:element name="historikkbostederutland" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/HistorikkBostederUtland/784878" />
+      <xsd:element name="historikkbostedereu" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/HistorikkBostederEU/784877" />
+      <xsd:element name="tidligerenavn" type="Person" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/TidligereNavn/784876" />
+      <xsd:element name="fleregjeldendestatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/FlereGjeldendeStatsborgerskap/784875" />
+      <xsd:element name="tidligerestatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/TidligereStatsborgerskap/784874" />
+      <xsd:element name="deusrequest" type="Deusrequest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/DeusRequest/784881" />
+      <xsd:element name="samboerellerektefelle" type="Samboerektefelle" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/Samboerellerektefelle/784882" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Personalia" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Person/768903">
+    <xsd:complexContent>
+      <xsd:extension base="Person">
+        <xsd:sequence>
+          <xsd:element name="bostedsadresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/adresse/768899" />
+          <xsd:element name="postadresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/postadresse/768908" />
+          <xsd:element name="mobilnummer" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/mobilnummer/769170" />
+          <xsd:element name="epost" type="Epost" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/epost/769173" />
+          <xsd:element name="hatttidligerenavn" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/TidligereNavn/779984" />
+          <xsd:element name="hattandrepersonnummer" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/AndrePersonNummer/779983" />
+          <xsd:element name="andreiddokumenter" type="Iddokumenter" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/AndreIDDokumenter/780011" />
+          <xsd:element name="harandreiddokumenter" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harAndreIDdokumenter/780012" />
+          <xsd:element name="tidligerenavn" type="TidligereNavn" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tidligerenavn/780210" />
+          <xsd:element name="harpostadrsammesombosted" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harpostadrsammesombosted/780242" />
+          <xsd:element name="person" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/person/780360" />
+          <xsd:element name="harandrestatsborgerskap" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harandrestatsborgerskap/782925" />
+          <xsd:element name="prefiksnr" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/prefiksnr/784816" />
+          <xsd:element name="ishatttidligerenavn" type="Alternativ" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/ishatttidligerenavn/784815" />
+          <xsd:element name="hatttidligerestatsborgerskap" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hatttidligerestatsborgerskap/784814" />
+          <xsd:element name="hattoppholdutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattoppholdutland/784813" />
+          <xsd:element name="hattoppholdeu" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattoppholdeu/784812" />
+          <xsd:element name="samtykkepersonkontroll" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/samtykkepersonkontroll/784811" />
+          <xsd:element name="tidligerepersondata" type="Iddokumentasjon" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/tidligerepersondata/785010" />
+          <xsd:element name="harandreforhold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harandreforhold/785566" />
+          <xsd:element name="harvedlegg" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harvedlegg/785565" />
+          <xsd:element name="vedlegg" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/vedlegg/785577" />
+          <xsd:element name="sivilstatus" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/sivilstatus/785578" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Iddokumenter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Iddokumenter/780010">
+    <xsd:sequence>
+      <xsd:element name="typedokument" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/typedokument/780009" />
+      <xsd:element name="dokumentnr" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/dokumentnr/780008" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780007" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TidligereNavn" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/NSM/Datakomplekstype/TidligereNavn/769122">
+    <xsd:sequence>
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/NSM/DataTypeegenskap/Navn/769121" />
+      <xsd:element name="datoForEndring" type="Dato" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/NSM/DataTypeegenskap/DatoForEndring/769126" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Iddokumentasjon" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Tidligereid/785009">
+    <xsd:sequence>
+      <xsd:element name="fodselsnummer" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fodselsnummer/785008" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/785007" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Person" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Domenemal/Dataobjekttype/Person/647517">
+    <xsd:sequence>
+      <xsd:element name="foedselssnummer" type="Personidentifikator" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/fødselsnummer/647516" />
+      <xsd:element name="personnavn" type="Personnavn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/navn/647515" />
+      <xsd:element name="foedselsdato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/fødselsdato/647514" />
+      <xsd:element name="utenlandsadresse" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Domenemal/Relasjonsegenskap/adresse/647513">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Adresse">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="d-nummer" type="Personidentifikator" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/d-nummer/647512" />
+      <xsd:element name="personstatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/statsborgerskap/769176" />
+      <xsd:element name="kjoenn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/kjønn/769188" />
+      <xsd:element name="utenlandskfoedselsnummer" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utenlandskfoedselsnummer/784817" />
+      <xsd:element name="naavaandestatsborgerskap" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/naavaandestatsborgerskap/784818" />
+      <xsd:element name="ukjentfodeland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/ukjentfodeland/785563" />
+      <xsd:element name="ukjentfodselsnr" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/ukjentfodselsnr/785562" />
+      <xsd:element name="ukjentstatsborgerskap" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/ukjentstatsborgerskap/785561" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Personnavn" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Domenemal/Datakomplekstype/Personnavn/647349">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Domenemal/DataTypeegenskap/fornavn/647348" />
+      <xsd:element name="mellomnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Domenemal/DataTypeegenskap/mellomnavn/647347" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Domenemal/DataTypeegenskap/etternavn/647346" />
+      <xsd:element name="fulltnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/NSM/DataTypeegenskap/FulltNavn/779993" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Adresse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Domenemal/Dataobjekttype/Adresse/647511">
+    <xsd:sequence>
+      <xsd:element name="adressebeskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/adressebeskrivelse/647510" />
+      <xsd:element name="postnummer" type="Postnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/postnummer/647509" />
+      <xsd:element name="poststed" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Domenemal/Dataegenskap/poststed/647508" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780047" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Statsborgerskap" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Statsborgerskap/784924">
+    <xsd:sequence>
+      <xsd:element name="fraDato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fraDato/784923" />
+      <xsd:element name="tilDato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tilDato/784922" />
+      <xsd:element name="passnr" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/passnr/784921" />
+      <xsd:element name="foedested" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/foedested/784920" />
+      <xsd:element name="statsborgerfrafodsel" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/statsborgerfrafodsel/784919" />
+      <xsd:element name="fodeland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fodeland/784918" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/784917" />
+      <xsd:element name="aarstall" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/aarstall/785185" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Strafferettslig" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Strafferettslig/769130">
+    <xsd:sequence>
+      <xsd:element name="hattlovbruddnorge" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/svar/769223" />
+      <xsd:element name="beskrivelserefselse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/påtaleunnlatelse/769236" />
+      <xsd:element name="hattrefselse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/refselse/769235" />
+      <xsd:element name="straffforholdnorge" type="Straffforhold" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/straffforholdnorge/780083" />
+      <xsd:element name="hattstraffutlandet" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/hattstraffutlandet/780082">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Straffforhold">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hattlovbruddutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattlovbruddutland/780081" />
+      <xsd:element name="sakernorge" type="Straffeforholdtyper" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/sakernorge/785471" />
+      <xsd:element name="sakerutland" type="Straffeforholdtyper" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/sakerutland/785472" />
+      <xsd:element name="beskrivelsesaknorge" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsesaknorge/785481" />
+      <xsd:element name="beskrivelsesakutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsesakutland/785480" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Straffforhold" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/StraffForhold/780088">
+    <xsd:sequence>
+      <xsd:element name="aar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/aar/780087" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780086" />
+      <xsd:element name="utfall" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utfall/780085" />
+      <xsd:element name="type" type="Tekst" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/type/780084" />
+      <xsd:element name="strafforhold" type="Straffeforholdtyper" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/strafforhold/785486" />
+      <xsd:element name="beskrivelsesak" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsesak/785487" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Straffeforholdtyper" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Straffeforholdtyper/785470">
+    <xsd:sequence>
+      <xsd:element name="vold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Vold/785469" />
+      <xsd:element name="narkotika" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Narkotika/785468" />
+      <xsd:element name="rusrelatert" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Rusrelatert/785467" />
+      <xsd:element name="trafikk" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Trafikk/785466" />
+      <xsd:element name="sedelighet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Sedelighet/785465" />
+      <xsd:element name="oekonomi" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Økonomi/785464" />
+      <xsd:element name="annet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Annet/785463" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Relasjoner" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Relasjoner/769206">
+    <xsd:sequence>
+      <xsd:element name="barn" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/barn/769316">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Person">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sosken" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/søsken/769315">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Person">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="mor" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/mor/780006" />
+      <xsd:element name="far" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/far/780005" />
+      <xsd:element name="fodtannetlandmor" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fodtAnnetlandMor/780004" />
+      <xsd:element name="fodtannetlandfar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fodtannetlandfar/784827" />
+      <xsd:element name="hattnaerutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaerutland/784826" />
+      <xsd:element name="hattnaerinvestering" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaerinvestering/784825" />
+      <xsd:element name="hattnaerstraffet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaerstraffet/784824" />
+      <xsd:element name="hattnaerorgkrim" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaerorgkrim/784823" />
+      <xsd:element name="hattnaerpengerutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaerpengerutland/784822" />
+      <xsd:element name="hattnaermyndigheter" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaermyndigheter/784821" />
+      <xsd:element name="hattnaeretteretning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattnaeretteretning/784820" />
+      <xsd:element name="naerutland" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naerutland/784835" />
+      <xsd:element name="naerinvestering" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naerinvestering/784834" />
+      <xsd:element name="naerstraffet" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naerstraffet/784833" />
+      <xsd:element name="naerorgkrim" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naerorgkrim/784832" />
+      <xsd:element name="naerpengerutland" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naerpengerutland/784831" />
+      <xsd:element name="naermyndigheter" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naermyndigheter/784830" />
+      <xsd:element name="naeretteretning" type="Naerstaaende" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naeretteretning/784829" />
+      <xsd:element name="naerbosattutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/naerutland/785559" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Naerstaaende" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Nærstående/780128">
+    <xsd:sequence>
+      <xsd:element name="personinfo" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/person/780127" />
+      <xsd:element name="harinvesteringerutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harinvesteringerutland/780126" />
+      <xsd:element name="bosattutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/bosattutland/780125" />
+      <xsd:element name="harblittstraffet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harblittstrattet/780124" />
+      <xsd:element name="harkontaktmedorgkrim" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harkontaktmedorgkrim/780123" />
+      <xsd:element name="hartransaksjonutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hartransaksjonutland/780122" />
+      <xsd:element name="hatttjenesterutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hatttjenesterutland/780121" />
+      <xsd:element name="hattkontaktetteretning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattkontaktetterett/780120" />
+      <xsd:element name="relasjonmedperson" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/relasjon/780129" />
+      <xsd:element name="beskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap//785564" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OEkonomi" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Økonomi/769221">
+    <xsd:sequence>
+      <xsd:element name="hattprivatelaan" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/mislighold/769233" />
+      <xsd:element name="hattmislighold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/konkurskarantene/769232" />
+      <xsd:element name="redegjorelseprivatelaan" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/økoSit/769254" />
+      <xsd:element name="investeringer" type="Investering" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/investeringer/780063" />
+      <xsd:element name="harinvesteringer" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harinvesteringer/780062" />
+      <xsd:element name="harmottattpenger" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harmottattpenger/780061" />
+      <xsd:element name="mottattpengerutland" type="TransaksjonUtland" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/mottattpengerutland/780060" />
+      <xsd:element name="harsentpenger" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harsentpeng/780059" />
+      <xsd:element name="sentpengerutland" type="TransaksjonUtland" nillable="true" minOccurs="0" maxOccurs="30" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/sentpengerutland/780069" />
+      <xsd:element name="okonomiskesituasjon" type="Tekst" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/okonomiskesituasjon/780071" />
+      <xsd:element name="okonomiskesituasjonbeskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/okonomiskesituasjonbeskrivelse/780070" />
+      <xsd:element name="redegjorelsemislighold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/redegjorelsemislighold/784858" />
+      <xsd:element name="redegjorelsepengespill" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/redegjorelsepengespill/784857" />
+      <xsd:element name="hattpengespill" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattpengespill/785257" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Investering" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Investering/780058">
+    <xsd:sequence>
+      <xsd:element name="type" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/type/780057" />
+      <xsd:element name="harinvestering" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harinvestering/780056" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780055" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransaksjonUtland" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/TransaksjonUtland/780068">
+    <xsd:sequence>
+      <xsd:element name="antallganger" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/antallganger/780067" />
+      <xsd:element name="opprinnelsepenger" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/opprinnelsepenger/780066" />
+      <xsd:element name="anledning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/anledning/780065" />
+      <xsd:element name="belop" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/belop/780064" />
+      <xsd:element name="hvem" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hvem/785261" />
+      <xsd:element name="aarstall" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/aarstall/785260" />
+      <xsd:element name="hvemandre" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hvemandre/785259" />
+      <xsd:element name="anledningandre" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/anledningandre/785258" />
+      <xsd:element name="transaksjonfrahvem" type="Okonomihvem" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/mottattfrahvem/785287" />
+      <xsd:element name="anledningtransaksjon" type="Okonomianledning" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/anledningfra/785286" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Okonomihvem" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/okonomi/785262">
+    <xsd:sequence>
+      <xsd:element name="Familie" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Familie/785267" />
+      <xsd:element name="Venner" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Venner/785266" />
+      <xsd:element name="Arbeidsgiver" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Arbeidsgiver/785265" />
+      <xsd:element name="Forretningsforbindelser" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Forretningsforbindelser/785264" />
+      <xsd:element name="Andre" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Andre/785263" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Okonomianledning" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Okonomianledning/785285">
+    <xsd:sequence>
+      <xsd:element name="gave" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/gave/785284" />
+      <xsd:element name="lonn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/lonn/785283" />
+      <xsd:element name="arv" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/arv/785282" />
+      <xsd:element name="laan" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/laan/785281" />
+      <xsd:element name="pengestotte" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/pengestotte/785280" />
+      <xsd:element name="annet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/annet/785279" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Rusmidler" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Rusmidler/769253">
+    <xsd:sequence>
+      <xsd:element name="hattalkoholhendelser" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/alkoReaksjoner/769280" />
+      <xsd:element name="beskrivelsereaksjonalkohol" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/alkoHendelser/769279" />
+      <xsd:element name="hattdoping" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/narkotikaHendelser/769278" />
+      <xsd:element name="hattalkoholreaksjoner" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/akan/769277" />
+      <xsd:element name="beskrivelsehendelseralkohol" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/behandling/769276" />
+      <xsd:element name="beskrivelsenarkotika" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/holdningBeskrivelse/769275" />
+      <xsd:element name="beskrivelsedoping" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/narkotikaRedegjørelse/769274" />
+      <xsd:element name="hattbruktnarkotika" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/dopingRedegjørelse/769273" />
+      <xsd:element name="hattbehandlingrus" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattbehandlingrus/780080" />
+      <xsd:element name="hattakan" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattakan/780079" />
+      <xsd:element name="typebehandling" type="Helsetypebehandling" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/typebehandling/785319" />
+      <xsd:element name="tidsrombehandling" type="Helsetidsrombehandling" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/tidsrombehandling/785318" />
+      <xsd:element name="beskrivelsebehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsebehandling/785321" />
+      <xsd:element name="beskrivelsepsykiskehelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsepsykiskehelse/785320" />
+      <xsd:element name="beskrivelsebehandlingrus" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsebehandlingrus/785453" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Helsetypebehandling" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Helsetypebehandling/785278">
+    <xsd:sequence>
+      <xsd:element name="samtaleterapi" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/samtaleterapi/785277" />
+      <xsd:element name="medikamentell" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/medikamentell/785276" />
+      <xsd:element name="frivilliginnleggelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/frivilliginnleggelse/785275" />
+      <xsd:element name="tvangsinnleggelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tvangsinnleggelse/785274" />
+      <xsd:element name="annet" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/annet/785273" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Helsetidsrombehandling" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Helsetidsrombehandling/785272">
+    <xsd:sequence>
+      <xsd:element name="eribehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/eribehandling/785271" />
+      <xsd:element name="ertilbehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/ertilbehandling/785270" />
+      <xsd:element name="mottokbheandlingsiste5" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/mottokbheandlingsiste5/785269" />
+      <xsd:element name="merenn5" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/merenn5/785268" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SikkerhetsOpplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/SikkerhetsOpplysninger/769298">
+    <xsd:sequence>
+      <xsd:element name="hattkontaktterror" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/terror/769297" />
+      <xsd:element name="hattkontaktetterretning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/kriminalitet/769296" />
+      <xsd:element name="beskrivelsekrim" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/nærståendeKriminalitet/769295" />
+      <xsd:element name="hattkontaktkrim" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/nærståendeAnmeldt/769294" />
+      <xsd:element name="beskrivelsekontaktterror" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelsekontaktterror/780119" />
+      <xsd:element name="harandreforhold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harandreforhold/780118" />
+      <xsd:element name="beskrivelseandreforhold" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelseandreforhold/780117" />
+      <xsd:element name="kontaktetterretning" type="Forbindelsekontakter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/kontaktutenlandsk/785478" />
+      <xsd:element name="kontaktutenlandskgrupper" type="Forbindelsekontakter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/kontaktutenlandskgrupper/785477" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Forbindelsekontakter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/forbindelsekontakter/785476">
+    <xsd:sequence>
+      <xsd:element name="jobbnorskemyndigheter" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/jobbnorskemyndigheter/785475" />
+      <xsd:element name="jobbforandre" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/jobbforandre/785474" />
+      <xsd:element name="privatperson" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/privatperson/785473" />
+      <xsd:element name="nei" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/Nei/785479" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Helse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Helse/769272">
+    <xsd:sequence>
+      <xsd:element name="hattvurderingsevne" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/psykisk/769271" />
+      <xsd:element name="hattsykdom" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/sykdom/769270" />
+      <xsd:element name="hattlegemidler" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/legemidler/769269" />
+      <xsd:element name="helseutredning" type="HelseUtredning" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/helseutredning/780075" />
+      <xsd:element name="utdypelselegemidler" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdypelselegemidler/780074" />
+      <xsd:element name="utdypelsevurderingsevne" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdypelsevurderingsevne/780073" />
+      <xsd:element name="typebehandling" type="Helsetypebehandling" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/typebehandling/785289" />
+      <xsd:element name="tidsrombehandling" type="Helsetidsrombehandling" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/tidsrombehandling/785288" />
+      <xsd:element name="utdypelsepsykiskhelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdypelsepsykiskhelse/785310" />
+      <xsd:element name="utdypelsebehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdypelsebehandling/785317" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HelseUtredning" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/HelseUtredning/780072">
+    <xsd:sequence>
+      <xsd:element name="typebehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/typebehandling/780078" />
+      <xsd:element name="tidspunktbehandling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tidspunktbehandling/780077" />
+      <xsd:element name="utdypelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdypelse/780076" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Arbeidserfaringer" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Arbeidserfaring/769306">
+    <xsd:sequence>
+      <xsd:element name="arbeidssted" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/arbeidssted/784805" />
+      <xsd:element name="framaaned" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/framaaned/784804" />
+      <xsd:element name="fraaar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fraaar/784803" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/784802" />
+      <xsd:element name="skole" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/skole/784801" />
+      <xsd:element name="stilling" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/stilling/784800" />
+      <xsd:element name="tilmaaned" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tilmaaned/784799" />
+      <xsd:element name="tilaar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tilaar/784798" />
+      <xsd:element name="type" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/type/784797" />
+      <xsd:element name="tildagsdato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/tildagsdato/784796" />
+      <xsd:element name="arbeidstedsland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/arbeidstedsland/784810" />
+      <xsd:element name="selskap" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/selskap/784809" />
+      <xsd:element name="selskapsland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/selskapsland/784808" />
+      <xsd:element name="skolensland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/skolensland/784807" />
+      <xsd:element name="arbeidsledigland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/arbeidsledigland/784806" />
+      <xsd:element name="foretak" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/foretak/785235" />
+      <xsd:element name="organisasjon" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/organisasjon/785236" />
+      <xsd:element name="beskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelse/785237" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StatsTilknytninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/StatsTilknytning/784870">
+    <xsd:sequence>
+      <xsd:element name="hatttjenensterutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hatttjenensterutland/784869" />
+      <xsd:element name="tilknyttningstilfeller" type="Tilknytningtilfelle" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/tilknyttningstilfeller/784868" />
+      <xsd:element name="hatttjenestemilitaere" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hatttjenestemilitære/784867" />
+      <xsd:element name="militaertjenesteland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/militærtjenesteland/784866" />
+      <xsd:element name="militaerfradato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/militærfradato/784865" />
+      <xsd:element name="militaertildato" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/militærtildato/784864" />
+      <xsd:element name="militaerbeskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/militærbeskrivelse/784863" />
+      <xsd:element name="harstudertutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/harstudertutland/784862" />
+      <xsd:element name="utdanningssteder" type="Utdanningssted" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/utdanningssteder/784861" />
+      <xsd:element name="hattkontaktetteretning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattkontaktetteretning/784860" />
+      <xsd:element name="beskrivelseetterretning" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelseetterretning/784859" />
+      <xsd:element name="kontaktmilitaere" type="Tilknytningtilfelle" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/kontaktmilitaere/785527" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Tilknytningtilfelle" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/TilknytningTilfelle/780093">
+    <xsd:sequence>
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780092" />
+      <xsd:element name="fra" type="Tidspunkt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fra/780091" />
+      <xsd:element name="til" type="Tidspunkt" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/til/780090" />
+      <xsd:element name="beskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/beskrivelse/780089" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Utdanningssted" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/UtdanningsSted/780103">
+    <xsd:sequence>
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/780102" />
+      <xsd:element name="utdanningsted" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/utdanningsted/780101" />
+      <xsd:element name="fra" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/fra/784872" />
+      <xsd:element name="til" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/til/784871" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Bostedhistorikk" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/BostedHistorikk/780024">
+    <xsd:sequence>
+      <xsd:element name="bakgrunn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/poststed/780021" />
+      <xsd:element name="spesifikasjon" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/spesifikasjon/780025" />
+      <xsd:element name="adresse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/adresse/784848" />
+      <xsd:element name="startoppholdmnd" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/startoppholdmnd/784854" />
+      <xsd:element name="startoppholdaar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/startoppholdaar/784853" />
+      <xsd:element name="sluttoppholdmnd" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/sluttoppholdmnd/784852" />
+      <xsd:element name="sluttoppholdaar" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/sluttoppholdaar/784851" />
+      <xsd:element name="postnr" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/postnr/784850" />
+      <xsd:element name="poststed" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/poststed/784849" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/land/784936" />
+      <xsd:element name="antallganger" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/antallganger/784937" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Deusrequest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Deusrequest/784931">
+    <xsd:sequence>
+      <xsd:element name="requestid" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/requestid/784930" />
+      <xsd:element name="personid" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/personid/784929" />
+      <xsd:element name="requestbusiness" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/requestbusiness/784928" />
+      <xsd:element name="clearauthority" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/clearauthority/784927" />
+      <xsd:element name="nationallevel" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/nationallevel/784926" />
+      <xsd:element name="natolevel" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/natolevel/784925" />
+      <xsd:element name="extshipmentref" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/extshipmentref/785234" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Samboerektefelle" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/NSM/Dataobjekttype/Samboerektefelle/784980">
+    <xsd:sequence>
+      <xsd:element name="hattsamboerstatsborgerandreland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattsamboerstatsborgerandreland/784979" />
+      <xsd:element name="hattoppholdutland" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattoppholdutland/784978" />
+      <xsd:element name="hattoppholdeos" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/NSM/Dataegenskap/hattoppholdeos/784977" />
+      <xsd:element name="samboerperson" type="Person" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/samboerperson/784976" />
+      <xsd:element name="naavaerendestatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/naavaerendestatsborgerskap/784975" />
+      <xsd:element name="flerestatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/FlereStatsborgerskap/784974" />
+      <xsd:element name="tidligerestatsborgerskap" type="Statsborgerskap" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/TidligereStatsborgerskap/784973" />
+      <xsd:element name="samboerektefellebostederutland" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/SamboerEktefelleBostederUtland/784972" />
+      <xsd:element name="samboerektefellebostedereu" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/SamboerEktefelleBostederEU/784971" />
+      <xsd:element name="bostederutland" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/BostederUtland/784970" />
+      <xsd:element name="bostedereu" type="Bostedhistorikk" nillable="true" minOccurs="0" maxOccurs="20" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/NSM/Relasjonsegenskap/BostederEU/784969" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Telefonnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/NSM/Dataenkeltype/Telefonnummer/769171">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Epost/647519">
+    <xsd:restriction base="Epost_RestriksjonEpost" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost_RestriksjonEpost" seres:elementtype="Verdirestriksjon" seres:guid="http://seres.no/guid/Domenemal/Verdirestriksjon/RestriksjonEpost/647518">
+    <xsd:restriction base="xsd:anyURI">
+      <xsd:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dato" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Dato/647357">
+    <xsd:restriction base="xsd:date" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Alternativ" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Alternativ/647355">
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Personidentifikator" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Personidentifikator/647361">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Navn/647354">
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Tekst/647360">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Postnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Postnummer/647363">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tidspunkt" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Domenemal/Dataenkeltype/Tidspunkt/647338">
+    <xsd:restriction base="xsd:dateTime" />
+  </xsd:simpleType>
+</xsd:schema>

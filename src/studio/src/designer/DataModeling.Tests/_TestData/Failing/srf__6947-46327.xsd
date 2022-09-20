@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xml:lang="nb" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2021-02-11T18:28:04.986+01:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/StatensSivilrettsforvaltning/BSK-rapport_M/2021" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="StatensSivilrettsforvaltning" />
+      <xsd:attribute name="modellnavn" fixed="BSK-rapport_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="nb" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="BSK-rapport_M" />
+  <xsd:complexType name="BSK-rapport_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Meldingsmodell/BSK-rapport_M/783357">
+    <xsd:sequence>
+      <xsd:element name="Dokumentasjon" type="Dokumentasjon" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Meldingsdel/Dokumentasjon/783355" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="6947" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="46327" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Dokumentasjon" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Meldingsdel/Dokumentasjon/783355">
+    <xsd:sequence>
+      <xsd:element name="innsender" type="InnsenderInfo" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap//783360" />
+      <xsd:element name="rapportInfo" type="RapportInfo" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/rapportInfo/783628" />
+      <xsd:element name="sakkyndig" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/sakkyndig/783627" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InnsenderInfo" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/InsenderInfo/783581">
+    <xsd:sequence>
+      <xsd:element name="adresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/adresse/783591" />
+      <xsd:element name="foedselsnummer" type="Foedselsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/fødselsnummer/783590" />
+      <xsd:element name="kontaktinformasjon" type="Kontaktinformasjon" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/kontaktinformasjon/783589" />
+      <xsd:element name="organisasjon" type="Organisasjon" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/organisasjon/783588" />
+      <xsd:element name="personNavn" type="PersonNavn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/personNavn/783587" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Adresse" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakomplekstype/Adresse/488222">
+    <xsd:sequence>
+      <xsd:element name="adresse1" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/adresse/488221" />
+      <xsd:element name="postnummer" type="Postnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/postnummer/488220" />
+      <xsd:element name="poststed" type="Poststed" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/poststed/488219" />
+      <xsd:element name="adresse2" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/adresse2/491453" />
+      <xsd:element name="land" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/land/613695" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktinformasjon" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakomplekstype/Kontaktinformasjon/643980">
+    <xsd:sequence>
+      <xsd:element name="telefon" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/telefon/643979" />
+      <xsd:element name="mobil" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/mobil/643978" />
+      <xsd:element name="epost" type="EPost" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/epost/643977" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjon" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakomplekstype/Organisasjon/643983">
+    <xsd:sequence>
+      <xsd:element name="navn" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/navn/643982" />
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/organisasjonsnummer/643981" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PersonNavn" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakomplekstype/PersonNavn/491450">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/fornavn/491449" />
+      <xsd:element name="mellomnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/mellomnavn/491448" />
+      <xsd:element name="etternavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/DataTypeegenskap/etternavn/491447" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RapportInfo" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/rapportInfo/783359">
+    <xsd:sequence>
+      <xsd:element name="antallBarnAlder" type="antallBarnAlder" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/antallBarnAlder/783606" />
+      <xsd:element name="antallBarnUtredet" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/antallBarnUtredet/783626" />
+      <xsd:element name="antallKomparenter" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/antallKomparenter/783625" />
+      <xsd:element name="antallSider" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/antallSider/783624" />
+      <xsd:element name="antallStandardiserteVerktoey" type="AntallStandardiserteVerktoey" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/antallStandardiserteVerktøy/783623" />
+      <xsd:element name="bruktTolk" type="JaNei" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/bruktTolk/783622" />
+      <xsd:element name="farFlyttetTilNorgeEtter2008" type="JaNei" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/farFlyttetTilNorgeEtter2008/783621" />
+      <xsd:element name="farFlyttetTilNorgeFoer2008" type="JaNei" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/farFlyttetTilNorgeFoer2008/783620" />
+      <xsd:element name="morFlyttetTilNorgeEtter2008" type="JaNei" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/morFlyttetTilNorgeEtter2008/783619" />
+      <xsd:element name="morFlyttetTilNorgeFoer2008" type="JaNei" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/morFlyttetTilNorgeFoer2008/783618" />
+      <xsd:element name="oppdragsgiver" type="Oppdragsgiver" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/oppdragsgiver/783617" />
+      <xsd:element name="listeHvaGjelderSaken" type="ListeHvaGjelderSaken" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/listeHvaGjelderSaken/783616" />
+      <xsd:element name="listeHvemGjelderUtredningen" type="ListeHvemGjelderUtredningen" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/listeHvemGjelderUtredningen/783615" />
+      <xsd:element name="listeVurderingsSkjema" type="ListeVurderingSkjema" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Relasjonsegenskap/listeVurderingsSkjema/783614" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="antallBarnAlder" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/antallBarnAlder/783583">
+    <xsd:sequence>
+      <xsd:element name="g_02" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/g_02/783605" />
+      <xsd:element name="g_35" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/g_35/783604" />
+      <xsd:element name="g_68" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/g_68/783603" />
+      <xsd:element name="g_911" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/g_911/783602" />
+      <xsd:element name="g_eldre" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/g_eldre/783601" />
+      <xsd:element name="j_02" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/j_02/783600" />
+      <xsd:element name="j_35" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/j_35/783599" />
+      <xsd:element name="j_68" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/j_68/783598" />
+      <xsd:element name="j_911" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/j_911/783597" />
+      <xsd:element name="j_eldre" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/j_eldre/783596" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AntallStandardiserteVerktoey" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/AntallStandardiserteVerktøy/783582">
+    <xsd:sequence>
+      <xsd:element name="jaBarn" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/jaBarn/783595" />
+      <xsd:element name="jaVoksne" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/jaVoksne/783594" />
+      <xsd:element name="neiBarn" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/neiBarn/783593" />
+      <xsd:element name="neiVoksne" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/neiVoksne/783592" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListeHvaGjelderSaken" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/ListeHvaGjelderSaken/783580">
+    <xsd:sequence>
+      <xsd:element name="hvaGjelderSaken" type="Tekst" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/hvaGjelderSaken/783586" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListeHvemGjelderUtredningen" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/ListeHvemGjelderUtredningen/783579">
+    <xsd:sequence>
+      <xsd:element name="hvemGjelderUtredningen" type="Tekst" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/hvemGjelderUtredningen/783585" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListeVurderingSkjema" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataobjekttype/ListeVurderingSkjema/783578">
+    <xsd:sequence>
+      <xsd:element name="vurderingsSkjema" type="Tekst" nillable="true" minOccurs="0" maxOccurs="10" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataegenskap/vurderingsSkjema/783584" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Tekst/488207">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Postnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Postnummer/488203">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Poststed" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Poststed/488208">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Fødselsnummer/488201">
+    <xsd:restriction base="Foedselsnummer_RestriksjonFoedselsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer_RestriksjonFoedselsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Tegnrestriksjon/RestriksjonFødselsnummer/524834">
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="[0-9]{11}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Telefonnummer/488211">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="EPost" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/EPost/488206">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Organisasjonsnummer/488205">
+    <xsd:restriction base="Organisasjonsnummer_RestriksjonOrganisasjonsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer_RestriksjonOrganisasjonsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Tegnrestriksjon/RestriksjonOrganisasjonsnummer/524833">
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="[0-9]{9}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Navn/488212">
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Dataenkeltype/Tall/488210">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="JaNei" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeliste/JaNei/613694">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Ja/613693" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Nei/613692" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Oppdragsgiver" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeliste/Oppdragsgiver/783613">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Barneverntjenesten" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Barneverntjenesten/783612" />
+      <xsd:enumeration value="Fylkesnemnda" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Fylkesnemnda/783611" />
+      <xsd:enumeration value="Høyesterett" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Høyesterett/783610" />
+      <xsd:enumeration value="Lagmannsretten" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Lagmannsretten/783609" />
+      <xsd:enumeration value="Privat part" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Privat part/783608" />
+      <xsd:enumeration value="Tingretten" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensSivilrettsforvaltning/Datakodeelement/Tingretten/783607" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

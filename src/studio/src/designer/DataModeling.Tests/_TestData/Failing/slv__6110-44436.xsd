@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2019-05-27T12:52:04.591+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/StatensLegemiddelverk/GodkjenningsfritakVeterinaer_M/2019" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="StatensLegemiddelverk" />
+      <xsd:attribute name="modellnavn" fixed="GodkjenningsfritakVeterinaer_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="GodkjenningsfritakVeterinaer_M" />
+  <xsd:complexType name="GodkjenningsfritakVeterinaer_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsmodell/GodkjenningsfritakVeterinær_M/664761">
+    <xsd:sequence>
+      <xsd:element name="Meldingsdel" type="Meldingsdel" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsdel/Meldingsdel/664769" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="6110" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="44436" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Meldingsdel" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Meldingsdel/Meldingsdel/664769">
+    <xsd:sequence>
+      <xsd:element name="drug" type="Drug" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/drug/664768" />
+      <xsd:element name="drugUsage" type="DrugUsage" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/drugUsage/664767" />
+      <xsd:element name="groundsInsufficientEffect" type="GroundsInsufficientEffect" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/groundsInsufficientEffect/664766" />
+      <xsd:element name="groundsNotSuitableForPatient" type="GroundsNotSuitableForPatient" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/groundsNotSuitableForPatient/664765" />
+      <xsd:element name="veterinary" type="Veterinary" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/veterinary/664764" />
+      <xsd:element name="groundsForUse" type="GroundsForUse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/groundsForUse/664763" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Drug" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/Drug/664786">
+    <xsd:sequence>
+      <xsd:element name="drugDosageFormList" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/drugDosageFormList/767566">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="DrugDosageFormList">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="drugAmount" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugAmount/664778" />
+      <xsd:element name="activeSubstance" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/activeSubstance/664783" />
+      <xsd:element name="producer" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/producer/664782" />
+      <xsd:element name="drugDosageForm" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugForm/664781" />
+      <xsd:element name="drugStrength" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugStrength/664780" />
+      <xsd:element name="drugName" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugName/767970" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DrugDosageFormList" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/DrugDosageFormList/767565">
+    <xsd:sequence>
+      <xsd:element name="drugDosageFormENG" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugDosageForm/767564" />
+      <xsd:element name="drugDosageFormNO" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugDosageFormNO/767585" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DrugUsage" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/DrugUsage/664777">
+    <xsd:sequence>
+      <xsd:element name="speciesNameAdress" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/speciesNameAdress/664775" />
+      <xsd:element name="foodProducingAnimal" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/foodProducingAnimal/664774" />
+      <xsd:element name="eeaCountry" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/eeaCountry/664773" />
+      <xsd:element name="indication" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/indication/664772" />
+      <xsd:element name="ownPractice" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/ownPractice/664771" />
+      <xsd:element name="individualAnimals" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/individualAnimals/664770" />
+      <xsd:element name="numberOfAnimals" type="Tall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/numberOfAnimals/664807" />
+      <xsd:element name="animalSpecies" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Relasjonsegenskap/animalSpecies/767974">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="AnimalSpecies">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AnimalSpecies" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/AnimalSpecies/767973">
+    <xsd:sequence>
+      <xsd:element name="animal" type="Tekst" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/animal/767972" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GroundsInsufficientEffect" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/GroundsInsufficientEffect/664802">
+    <xsd:sequence>
+      <xsd:element name="drugName" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugName/664801" />
+      <xsd:element name="insufficientEffect" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/insufficientEffect/664800" />
+      <xsd:element name="unacceptableSideEffect" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/unacceptableSideEffect/664799" />
+      <xsd:element name="sentSideEffectMessage" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/sentSideEffectMessage/664798" />
+      <xsd:element name="reason" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/reason/664797" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GroundsNotSuitableForPatient" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/GroundsNotSuitableForPatient/664796">
+    <xsd:sequence>
+      <xsd:element name="drugSusceptibilityTesting" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/drugSusceptibilityTesting/664795" />
+      <xsd:element name="dueToWarnings" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/dueToWarnings/664794" />
+      <xsd:element name="dueToStrength" type="Boolean" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/dueToStrength/664793" />
+      <xsd:element name="reason" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/reason/664792" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Veterinary" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataobjekttype/Veterinary/664791">
+    <xsd:sequence>
+      <xsd:element name="hprNumber" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/hprNumber/664790" />
+      <xsd:element name="name" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/name/664789" />
+      <xsd:element name="email" type="EPost" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/email/664788" />
+      <xsd:element name="telephoneNumber" type="Telefonnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataegenskap/telephoneNumber/664787" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/Tekst/474237">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Boolean" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/Boolean/477217">
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/Tall/474238">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="EPost" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/EPost/474236">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Dataenkeltype/Telefonnummer/474239">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="GroundsForUse" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Datakodeliste/GroundsForUse/664806">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="insufficientEffect" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Datakodeelement/insufficientEffect/664805" />
+      <xsd:enumeration value="notSuitableForPatient" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Datakodeelement/notSuitableForPatient/664804" />
+      <xsd:enumeration value="lacksApprovedDrug" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/StatensLegemiddelverk/Datakodeelement/lacksApprovedDrug/664803" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.17" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2016-11-23T22:46:03.977+01:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/OsloKommune/RevisorsBekreftelse_M/2016" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="OsloKommune" />
+      <xsd:attribute name="modellnavn" fixed="RevisorsBekreftelse_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.1" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="RevisorsBekreftelse_M" />
+  <xsd:complexType name="RevisorsBekreftelse_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/OsloKommune/Meldingsmodell/RevisorsBekreftelse_M/626661">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Header" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/OsloKommune/Meldingsdel/Header/626655" />
+      <xsd:element name="Body" type="Body" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/OsloKommune/Meldingsdel/Body/626652" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="5262" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="41499" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Header" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/OsloKommune/Meldingsdel/Header/626655">
+    <xsd:sequence>
+      <xsd:element name="returnRoutingQueue" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/routing/631939" />
+      <xsd:element name="correlationID" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/correlationID/631938" />
+      <xsd:element name="organisasjon" type="Organisasjon" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/OsloKommune/Relasjonsegenskap/organisasjon/626654" />
+      <xsd:element name="kontaktperson" type="Kontaktperson" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/OsloKommune/Relasjonsegenskap/kontaktperson/631937" />
+      <xsd:element name="revisorselskap" type="Revisorselskap" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/OsloKommune/Relasjonsegenskap/revisorSelskap/633831" />
+      <xsd:element name="tittel" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/tittel/631936" />
+      <xsd:element name="veilederReferanse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/veilederReferanse/631935" />
+      <xsd:element name="revisorSkalBekrefte" type="Tekst" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/revisorSkalBekrefte/631934" />
+      <xsd:element name="revisorOppdragsbeskrivelse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/revisorOppdragsbeskrivelse/631933" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjon" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/OsloKommune/Dataobjekttype/Organisasjon/626645">
+    <xsd:sequence>
+      <xsd:element name="orgnr" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/orgnr/626644" />
+      <xsd:element name="orgnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/orgnavn/626643" />
+      <xsd:element name="adresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/adresse/626642" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Adresse" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/OsloKommune/Datakomplekstype/Adresse/626671">
+    <xsd:sequence>
+      <xsd:element name="gateadresse" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/OsloKommune/DataTypeegenskap/gateadresse/626670" />
+      <xsd:element name="postnummer" type="Postnummer" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/OsloKommune/DataTypeegenskap/postnummer/626669" />
+      <xsd:element name="poststed" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/OsloKommune/DataTypeegenskap/poststed/626668" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktperson" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/OsloKommune/Dataobjekttype/Kontaktperson/631932">
+    <xsd:sequence>
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/navn/631931" />
+      <xsd:element name="telefonnr" type="Nummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/telefonnr/631930" />
+      <xsd:element name="epost" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/epost/631929" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Revisorselskap" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/OsloKommune/Dataobjekttype/RevisorSelskap/633829">
+    <xsd:sequence>
+      <xsd:element name="orgnr" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/orgnr/633828" />
+      <xsd:element name="orgnavn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/orgnavn/633827" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Body" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/OsloKommune/Meldingsdel/Body/626652">
+    <xsd:sequence>
+      <xsd:element name="revisor" type="Revisor" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/OsloKommune/Relasjonsegenskap/revisor/633830" />
+      <xsd:element name="bekreftelseValg" type="BekreftelseValg" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/bekreftelseValg/626650" />
+      <xsd:element name="merknad" type="Tekst" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/merknad/626649" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Revisor" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/OsloKommune/Dataobjekttype/Revisor/633826">
+    <xsd:sequence>
+      <xsd:element name="foedselsnummer" type="Foedselsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/fødselsnummer/633825" />
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/OsloKommune/Dataegenskap/navn/633824" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Tekst/626704">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Organisasjonsnummer/626708">
+    <xsd:restriction base="RestriksjonOrganisasjonsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonOrganisasjonsnummer" seres:elementtype="Verdirestriksjon" seres:guid="http://seres.no/guid/OsloKommune/Verdirestriksjon/RestriksjonOrganisasjonsnummer/626663">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Navn/626698">
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Postnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Postnummer/626707">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Nummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Nummer/626685">
+    <xsd:restriction base="xsd:positiveInteger" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/OsloKommune/Dataenkeltype/Fødselsnummer/626694">
+    <xsd:restriction base="RestsriksjonFoedselsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestsriksjonFoedselsnummer" seres:elementtype="Verdirestriksjon" seres:guid="http://seres.no/guid/OsloKommune/Verdirestriksjon/RestsriksjonFødselsnummer/626664">
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="BekreftelseValg" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/OsloKommune/Datakodeliste/BekreftelseValg/626659">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="UtenMerknad" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/OsloKommune/Datakodeelement/UtenMerknad/626658" />
+      <xsd:enumeration value="MedMerknad" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/OsloKommune/Datakodeelement/MedMerknad/626657" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/OsloKommune/Datakodeelement//626656" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

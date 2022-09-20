@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.23" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2019-05-21T14:09:52.454+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/Finanstilsynet/KRT-1009KvartalsoppgaveForvaltningsselskaperVPfond_2015_M/2019" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="Finanstilsynet" />
+      <xsd:attribute name="modellnavn" fixed="KRT-1009KvartalsoppgaveForvaltningsselskaperVPfond_2015_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="false" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="saernorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="true" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="spraak" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="KRT-1009KvartalsoppgaveForvaltningsselskaperVPfond_2015_M" />
+  <xsd:complexType name="KRT-1009KvartalsoppgaveForvaltningsselskaperVPfond_2015_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1009KvartalsoppgaveForvaltningsselskaperVPfond_2015_M/600661">
+    <xsd:sequence>
+      <xsd:element name="RapportKRT-1009" type="RapportKRT-1009" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1009/600395" />
+      <xsd:element name="SkjemainnholdKRT-1009" type="SkjemainnholdKRT-1009" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1009/600659" />
+      <xsd:element name="rapport" type="rapport" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/666134" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="4702" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="44390" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="RapportKRT-1009" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1009/600395">
+    <xsd:sequence>
+      <xsd:element name="rapporteringsperiode" type="Rapporteringsperiode" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsperiode/600394" />
+      <xsd:element name="rapporteringsenhet" type="Rapporteringsenhet" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsenhet/600393" />
+      <xsd:element name="ansatte" type="Personaloversikt" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ansatte/600392" />
+      <xsd:element name="ansatteEndring" type="PersonaloversiktEndring" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ansatteEndring/600391" />
+      <xsd:element name="omRevisor" type="OmRevisor" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/omRevisor/600679" />
+      <xsd:element name="rapport_Frekvens" type="Rapport_Frekvens" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/rapport_Frekvens/600741" />
+      <xsd:element name="dist_Periode" type="Dist_Periode" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/dist_Periode/600740" />
+      <xsd:element name="rapport_Periode" type="Rapport_Periode" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/rapport_Periode/600739" />
+      <xsd:element name="periodeType" type="PeriodeType" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/periodeType/658142" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Rapporteringsperiode" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsperiode/600398">
+    <xsd:sequence>
+      <xsd:element name="aar" type="AAr" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/år/600397" />
+      <xsd:element name="rapporteringsperiode" type="Rapporteringsperiode_2valg" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/rapporteringsperiode/658144" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AAr" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/År/10615">
+    <xsd:simpleContent>
+      <xsd:extension base="AAr_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/År/10615" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapporteringsperiode_2valg" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/Rapporteringsperiode_2valg/600738">
+    <xsd:simpleContent>
+      <xsd:extension base="Rapporteringsperiode_2valg_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/Rapporteringsperiode_2valg/600738" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapporteringsenhet" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsenhet/600404">
+    <xsd:sequence>
+      <xsd:element name="tillatelse" type="SvaralternativJaNei_S82" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/tillatelse/600400" />
+      <xsd:element name="rapportering" type="Rapportering" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/rapportering/608319" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S82" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S82/494317">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S82_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S82/494317" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapportering" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/Rapportering/608326">
+    <xsd:simpleContent>
+      <xsd:extension base="Rapportering_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/Rapportering/608326" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Personaloversikt" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Personaloversikt/600421">
+    <xsd:sequence>
+      <xsd:element name="administrasjon" type="Heltall_5_1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/administrasjon/600420" />
+      <xsd:element name="forvaltere" type="Heltall_5_2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/forvaltere/600419" />
+      <xsd:element name="internAnalyseKontroll" type="Heltall_5_3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/internAnalyseKontroll/600418" />
+      <xsd:element name="oppgjoer" type="Heltall_5_4" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/oppgjør/600417" />
+      <xsd:element name="andre" type="Heltall_5_5" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andre/600416" />
+      <xsd:element name="totalt" type="Heltall_6_1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/totalt/600415" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_5_1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_1/493700">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_5_1_RestriksjonHeltall_5_1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_1/493700" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_5_2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_2/493699">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_5_2_RestriksjonHeltall_5_2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_2/493699" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_5_3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_3/493698">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_5_3_RestriksjonHeltall_5_3">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_3/493698" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_5_4" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_4/493697">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_5_4_RestriksjonHeltall_5_4">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_4/493697" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_5_5" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_5/493696">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_5_5_RestriksjonHeltall_5_5">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_5_5/493696" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_6_1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_6_1/493668">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_6_1_RestriksjonHeltall_6_1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_6_1/493668" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonaloversiktEndring" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/PersonaloversiktEndring/600407">
+    <xsd:sequence>
+      <xsd:element name="ansettelser" type="Heltall_8_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/ansettelser/600406" />
+      <xsd:element name="avganger" type="Heltall_8_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/avganger/600405" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_8_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_8_S1/487724">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_8_S01_RestriksjonHeltall_8_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_8_S1/487724" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_8_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_8_S2/487723">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_8_S02_RestriksjonHeltall_8_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_8_S2/487723" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="OmRevisor" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/OmRevisor/600678">
+    <xsd:sequence>
+      <xsd:element name="navnRevisor" type="Navn_S2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/navnRevisor/600677" />
+      <xsd:element name="revisorregisternummer" type="RevisorregisterNr" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/revisorregisternummer/600676" />
+      <xsd:element name="telefonnrPrefiks" type="Landprefiks_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnrPrefiks/600675" />
+      <xsd:element name="telefonnr" type="Telefonnummer_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnr/600674" />
+      <xsd:element name="revisorAnsattRevisjonsselskap" type="SvaralternativJaNei_S92" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/revisorAnsattRevisjonsselskap/600673" />
+      <xsd:element name="revisjonsselskap" type="Revisjonsselskap" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsselskap/600672" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Navn_S2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S2/487453">
+    <xsd:simpleContent>
+      <xsd:extension base="Navn_S2_RestriksjonNavn_S2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S2/487453" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="RevisorregisterNr" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/RevisorregisterNr/485983">
+    <xsd:simpleContent>
+      <xsd:extension base="RevisorregisterNr_RestriksjonRevisorregisterNr">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/RevisorregisterNr/485983" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Landprefiks_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Landprefiks_S01/519305">
+    <xsd:simpleContent>
+      <xsd:extension base="Landprefiks_S01_RestriksjonLandprefiks_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Landprefiks_S01/519305" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Telefonnummer_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Telefonnummer_S02/519304">
+    <xsd:simpleContent>
+      <xsd:extension base="Telefonnummer_S02_RestriksjonTelefon15_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Telefonnummer_S02/519304" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S92" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S92_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Revisjonsselskap" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsselskap/600671">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer_S2" type="Organisasjonsnummer_S2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/organisasjonsnummer_S2/600670" />
+      <xsd:element name="organisasjonsnavn_S2" type="Organisasjonsnavn_S2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/organisasjonsnavn_S2/600669" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjonsnummer_S2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer_S2/488603">
+    <xsd:simpleContent>
+      <xsd:extension base="Organisasjonsnummer_S2_RestriksjonOrganisasjonsnummer_S2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer_S2/488603" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjonsnavn_S2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnavn_S2/488606">
+    <xsd:simpleContent>
+      <xsd:extension base="Organisasjonsnavn_S2_RestriksjonOrganisasjonsnavn_S2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnavn_S2/488606" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapport_Frekvens" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Rapport_Frekvens/594341">
+    <xsd:simpleContent>
+      <xsd:extension base="Rapport_Frekvens_RestriksjonRapport_Frekvens">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Rapport_Frekvens/594341" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Dist_Periode" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Dist_Periode/594219">
+    <xsd:simpleContent>
+      <xsd:extension base="Dist_Periode_RestriksjonDist_Periode">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Dist_Periode/594219" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapport_Periode" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Rapport_Periode/594350">
+    <xsd:simpleContent>
+      <xsd:extension base="Rapport_Periode_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Rapport_Periode/594350" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PeriodeType" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/PeriodeType/658143">
+    <xsd:simpleContent>
+      <xsd:extension base="PeriodeType_RestriksjonTekst10_1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/PeriodeType/658143" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SkjemainnholdKRT-1009" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1009/600659">
+    <xsd:sequence>
+      <xsd:element name="resultatregnskap" type="Resultatregnskap" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatregnskap/600658" />
+      <xsd:element name="kapital" type="Kapital" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kapital/600657" />
+      <xsd:element name="andreOpplysninger" type="AndreOpplysninger" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreOpplysninger/600655" />
+      <xsd:element name="aktivForvaltning" type="AktivForvaltning" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/aktivForvaltning/600654" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Resultatregnskap" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatregnskap/600653">
+    <xsd:sequence>
+      <xsd:element name="driftsresultat" type="Heltall_11_S03" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/driftsresultat/600652" />
+      <xsd:element name="nettoFinansposter" type="Heltall_10_S9" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/nettoFinansposter/600651" />
+      <xsd:element name="delaarsresultatAArsresultat" type="Heltall_11_S06" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/delårsresultatÅrsresultat/600650" />
+      <xsd:element name="merknader" type="Tekst_255_3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/merknader/600649" />
+      <xsd:element name="driftsinntekter" type="Driftsinntekter" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/driftsinntekter/600648" />
+      <xsd:element name="driftskostnader" type="Driftskostnader" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/driftskostnader/600647" />
+      <xsd:element name="ordinaertResultat" type="OrdinaertResultat" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ordinærtResultat/600646" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S03" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S03/493664">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S03_RestriksjonHeltall_11_S03">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S03/493664" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S9" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S9/487469">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S9_RestriksjonHeltall_10_S9">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S9/487469" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S06" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S06/493661">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S06_RestriksjonHeltall_11_S06">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S06/493661" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_3/487456">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_3_RestriksjonTekst_255_3">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_3/487456" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Driftsinntekter" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Driftsinntekter/600644">
+    <xsd:sequence>
+      <xsd:element name="forvaltningsgodtgjoerelse" type="Heltall_10_S1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/forvaltningsgodtgjørelse/600643" />
+      <xsd:element name="aksjefond" type="Heltall_10_S45" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjefond/600642" />
+      <xsd:element name="kombinasjonsfond" type="Heltall_10_S46" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kombinasjonsfond/600641" />
+      <xsd:element name="obligasjonsfond" type="Heltall_10_S47" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/obligasjonsfond/600640" />
+      <xsd:element name="pengemarkedsfond" type="Heltall_10_S48" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/pengemarkedsfond/600639" />
+      <xsd:element name="andreVerdipapirfond" type="Heltall_10_S49" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreVerdipapirfond/600638" />
+      <xsd:element name="alternativeInvesteringsfond" type="Heltall_10_S85" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/alternativeInvesteringsfond/608321" />
+      <xsd:element name="provisjonsinntekter" type="Heltall_10_S2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/provisjonsinntekter/600637" />
+      <xsd:element name="aksjefondProvisjon" type="Heltall_10_S50" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjefondProvisjon/600636" />
+      <xsd:element name="kombinasjonsfondProvisjon" type="Heltall_10_S51" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kombinasjonsfondProvisjon/600635" />
+      <xsd:element name="obligasjonsfondProvisjon" type="Heltall_10_S52" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/obligasjonsfondProvisjon/600634" />
+      <xsd:element name="pengemarkedsfondProvisjon" type="Heltall_10_S53" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/pengemarkedsfondProvisjon/600633" />
+      <xsd:element name="andreVerdipapirfondProvisjon" type="Heltall_10_S54" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreVerdipapirfondProvisjon/600632" />
+      <xsd:element name="alternativeInvesteringsfondProvisjon" type="Heltall_10_S86" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/alternativeInvesteringsfondProvisjon/608320" />
+      <xsd:element name="aktivForvaltning" type="Heltall_10_S4" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/aktivForvaltning/600631" />
+      <xsd:element name="tilleggstjenester" type="Heltall_10_S5" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/tilleggstjenester/600630" />
+      <xsd:element name="investeringsraadgivning" type="Heltall_10_S55" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/investeringsrådgivning/600629" />
+      <xsd:element name="oppbevaring" type="Heltall_10_S56" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/oppbevaring/600628" />
+      <xsd:element name="andre" type="Heltall_10_S3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andre/600627" />
+      <xsd:element name="sum" type="Heltall_11_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sum/600626" />
+      <xsd:element name="sumDriftsinntekterAlternative" type="Heltall_11_S32" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumDriftsinntekterAlternative/628138" />
+      <xsd:element name="sumDriftsinntekterNasjonale" type="Heltall_11_S31" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumDriftsinntekterNasjonale/628137" />
+      <xsd:element name="sumDriftsinntekterUcits" type="Heltall_11_S30" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumDriftsinntekterUcits/628136" />
+      <xsd:element name="mottak" type="Heltall_10_S78" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/mottak/666116" />
+      <xsd:element name="sumGrlagTilsavgAIFforvalter" type="Heltall_11_S17" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumGrlagTilsavgAIFforvalter/666115" />
+      <xsd:element name="sumGrlagTilsavgForvaltningsselskap" type="Heltall_11_S18" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumGrlagTilsavgForvaltningsselskap/666114" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S1/487488">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S1_RestriksjonHeltall_10_S1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S1/487488" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S45" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S45/494368">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S45_RestriksjonHeltall_10_S45">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S45/494368" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S46" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S46/494367">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S46_RestriksjonHeltall_10_S46">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S46/494367" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S47" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S47/494366">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S47_RestriksjonHeltall_10_S47">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S47/494366" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S48" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S48/494365">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S48_RestriksjonHeltall_10_S48">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S48/494365" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S49" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S49/494364">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S49_RestriksjonHeltall_10_S49">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S49/494364" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S85" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S85/494332">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S85_RestriksjonHeltall_10_S85">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S85/494332" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S2/487477">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S2_RestriksjonHeltall_10_S2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S2/487477" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S50" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S50/494363">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S50_RestriksjonHeltall_10_S50">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S50/494363" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S51" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S51/494362">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S51_RestriksjonHeltall_10_S51">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S51/494362" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S52" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S52/494361">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S52_RestriksjonHeltall_10_S52">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S52/494361" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S53" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S53/494360">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S53_RestriksjonHeltall_10_S53">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S53/494360" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S54" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S54/494359">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S54_RestriksjonHeltall_10_S54">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S54/494359" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S86" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S86/608328">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S86_RestriksjonHeltall_10_S86">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S86/608328" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S4" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S4/487474">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S4_RestriksjonHeltall_10_S4">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S4/487474" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S5" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S5/487473">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S5_RestriksjonHeltall_10_S5">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S5/487473" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S55" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S55/494358">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S55_RestriksjonHeltall_10_S55">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S55/494358" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S56" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S56/494357">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S56_RestriksjonHeltall_10_S56">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S56/494357" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S3/487475">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S3_RestriksjonHeltall_10_S3">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S3/487475" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S01/493665">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S01_RestriksjonHeltall_11_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S01/493665" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S32" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S32/628135">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S32_RestriksjonHeltall_11_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S32/628135" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S31" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S31/494331">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S31_RestriksjonHeltall_11_S31">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S31/494331" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S30" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S30/494323">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S30_RestriksjonHeltall_11_S30">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S30/494323" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S78" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S78/494349">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S78_RestriksjonHeltall_10_S78">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S78/494349" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S17" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S17/493650">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S17_RestriksjonHeltall_11_S17">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S17/493650" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S18" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S18/493649">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S18_RestriksjonHeltall_11_S18">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S18/493649" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Driftskostnader" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Driftskostnader/600625">
+    <xsd:sequence>
+      <xsd:element name="loennSosialeKostnader" type="Heltall_10_S6" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/lønnSosialeKostnader/600624" />
+      <xsd:element name="markedsfoering" type="Heltall_10_S7" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/markedsføring/600623" />
+      <xsd:element name="provisjon" type="Heltall_10_S57" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/provisjon/600622" />
+      <xsd:element name="andre" type="Heltall_10_S8" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andre/600621" />
+      <xsd:element name="sum" type="Heltall_11_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sum/600620" />
+      <xsd:element name="fasteLoennOgSosialeKostnader" type="Heltall_9_S17" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/fasteLønnOgSosialeKostnader/634731" />
+      <xsd:element name="variableLoennOgSosialeKostnader" type="Heltall_9_S18" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/variableLønnOgSosialeKostnader/634730" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S6" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S6/487472">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S6_RestriksjonHeltall_10_S6">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S6/487472" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S7" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S7/487471">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S7_RestriksjonHeltall_10_S7">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S7/487471" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S57" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S57/494356">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S57_RestriksjonHeltall_10_S57">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S57/494356" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S8" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S8/487470">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S8_RestriksjonHeltall_10_S82">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S8/487470" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S02/493666">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S02_RestriksjonHeltall_11_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S02/493666" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S17" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S17/620303">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S17_RestriksjonHeltall_9_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S17/620303" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S18" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S18/620302">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S18_RestriksjonHeltall_9_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S18/620302" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrdinaertResultat" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/OrdinærtResultat/600619">
+    <xsd:sequence>
+      <xsd:element name="foerSkattekostnad" type="Heltall_11_S04" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/førSkattekostnad/600618" />
+      <xsd:element name="skattekostnad" type="Heltall_10_S10" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/skattekostnad/600617" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S04" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S04/493663">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S04_RestriksjonHeltall_11_S04">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S04/493663" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S10" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S10/487487">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S10_RestriksjonHeltall_10_S10">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S10/487487" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Kapital" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kapital/600612">
+    <xsd:sequence>
+      <xsd:element name="egenkapital" type="Balanse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/600609" />
+      <xsd:element name="prinsipperForUtarbeidelse" type="PrinsipperForUtarbeidelse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/prinsipperForUtarbeidelse/600708" />
+      <xsd:element name="revisorsUttalelse" type="RevisorsUttalelse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisorsUttalelse/600707" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Balanse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Balanse/600606">
+    <xsd:sequence>
+      <xsd:element name="utsattSkattefordel" type="Heltall_10_S13" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/utsattSkattefordel/600605" />
+      <xsd:element name="goodwill" type="Heltall_10_S15" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/goodwill/604917" />
+      <xsd:element name="andreImmaterielle" type="Heltall_10_S58" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreImmaterielle/600604" />
+      <xsd:element name="aksjerDatter" type="Heltall_10_S59" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjerDatter/600603" />
+      <xsd:element name="fondsandeler" type="Heltall_10_S60" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/fondsandeler/600602" />
+      <xsd:element name="andreFinansielle" type="Heltall_10_S61" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreFinansielle/600601" />
+      <xsd:element name="fordringerEiere" type="Heltall_10_S62" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/fordringerEiere/600600" />
+      <xsd:element name="andreAnleggsmidler" type="Heltall_10_S63" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreAnleggsmidler/600599" />
+      <xsd:element name="sumAnleggsmidler" type="Heltall_11_S23" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumAnleggsmidler/600598" />
+      <xsd:element name="kundefordringer" type="Heltall_10_S64" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kundefordringer/600597" />
+      <xsd:element name="fordringerVerdipapirforetak" type="Heltall_10_S65" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/fordringerVerdipapirforetak/600596" />
+      <xsd:element name="bankinnskudd" type="Heltall_10_S66" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/bankinnskudd/600595" />
+      <xsd:element name="andreOmloepsmidler" type="Heltall_10_S67" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreOmløpsmidler/600594" />
+      <xsd:element name="sumOmloepsmidler" type="Heltall_11_S24" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumOmløpsmidler/600593" />
+      <xsd:element name="sumEiendeler" type="Heltall_11_S25" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumEiendeler/600592" />
+      <xsd:element name="aksjekapital" type="Heltall_10_S81" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjekapital/600591" />
+      <xsd:element name="egneAksjer" type="Heltall_10_S68" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/egneAksjer/600590" />
+      <xsd:element name="overkursfond" type="Heltall_10_S14" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/overkursfond/600589" />
+      <xsd:element name="annenEgenkapital" type="Heltall_10_S16" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/annenEgenkapital/600588" />
+      <xsd:element name="resultatHittil" type="Heltall_10_S17" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/resultatHittil/600587" />
+      <xsd:element name="sumEgenkapital" type="Heltall_11_S07" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumEgenkapital/600586" />
+      <xsd:element name="merknader" type="Tekst_255_1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/merknader/600585" />
+      <xsd:element name="sumEgenkapitalGjeld" type="Heltall_11_S26" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumEgenkapitalGjeld/600584" />
+      <xsd:element name="balanseGjeld" type="BalanseGjeld" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/balanseGjeld/600583" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S13" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S13/487484">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S13_RestriksjonHeltall_10_S13">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S13/487484" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S15" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S15/487482">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S15_RestriksjonHeltall_10_S15">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S15/487482" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S58" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S58/494355">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S58_RestriksjonHeltall_10_S58">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S58/494355" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S59" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S59/494354">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S59_RestriksjonHeltall_10_S59">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S59/494354" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S60" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S60/494353">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S60_RestriksjonHeltall_10_S60">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S60/494353" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S61" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S61/494352">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S61_RestriksjonHeltall_10_S61">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S61/494352" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S62" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S62/494351">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S62_RestriksjonHeltall_10_S62">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S62/494351" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S63" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S63/494343">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S63_RestriksjonHeltall_10_S63">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S63/494343" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S23" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S23/494330">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S23_RestriksjonHeltall_11_S23">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S23/494330" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S64" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S64/494322">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S64_RestriksjonHeltall_10_S64">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S64/494322" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S65" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S65/494321">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S65_RestriksjonHeltall_10_S65">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S65/494321" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S66" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S66/494340">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S66_RestriksjonHeltall_10_S66">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S66/494340" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S67" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S67/494339">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S67_RestriksjonHeltall_10_S67">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S67/494339" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S24" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S24/494329">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S24_RestriksjonHeltall_11_S24">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S24/494329" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S25" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S25/494328">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S25_RestriksjonHeltall_11_S25">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S25/494328" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S81" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S81/494336">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S81_RestriksjonHeltall_10_S81">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S81/494336" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S68" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S68/494338">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S68_RestriksjonHeltall_10_S68">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S68/494338" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S14" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S14/487483">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S14_RestriksjonHeltall_10_S14">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S14/487483" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S16" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S16/487481">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S16_RestriksjonHeltall_10_S16">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S16/487481" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S17" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S17/487480">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S17_RestriksjonHeltall_10_S17">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S17/487480" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S07" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S07/493660">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S07_RestriksjonHeltall_11_S07">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S07/493660" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_1/487458">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_1_RestriksjonTekst_255_1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_1/487458" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S26" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S26/494327">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S26_RestriksjonHeltall_11_S26">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S26/494327" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="BalanseGjeld" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/BalanseGjeld/600582">
+    <xsd:sequence>
+      <xsd:element name="utsattSkatt" type="Heltall_10_S69" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/utsattSkatt/600581" />
+      <xsd:element name="gjeldEiere" type="Heltall_10_S70" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/gjeldEiere/600580" />
+      <xsd:element name="laanUtenFastsattLoepetid" type="Heltall_10_S71" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/lånUtenFastsattLøpetid/600579" />
+      <xsd:element name="laanMedFastsattLoepetid" type="Heltall_10_S72" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/lånMedFastsattLøpetid/600578" />
+      <xsd:element name="annenLangsiktigGjeld" type="Heltall_10_S73" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/annenLangsiktigGjeld/600577" />
+      <xsd:element name="sumLangsiktigGjeld" type="Heltall_11_S27" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumLangsiktigGjeld/600576" />
+      <xsd:element name="kassekreditt" type="Heltall_10_S74" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kassekreditt/600575" />
+      <xsd:element name="gjeldEiereKortsiktig" type="Heltall_10_S75" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/gjeldEiereKortsiktig/600574" />
+      <xsd:element name="gjeldKunder" type="Heltall_10_S76" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/gjeldKunder/600573" />
+      <xsd:element name="annenKorsiktigGjeld" type="Heltall_10_S77" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/annenKorsiktigGjeld/600572" />
+      <xsd:element name="sumKortsiktigGjeld" type="Heltall_11_S28" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumKortsiktigGjeld/600571" />
+      <xsd:element name="sumGjeld" type="Heltall_11_S29" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sumGjeld/600570" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S69" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S69/494337">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S69_RestriksjonHeltall_10_S69">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S69/494337" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S70" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S70/494347">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S70_RestriksjonHeltall_10_S70">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S70/494347" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S71" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S71/494345">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S71_RestriksjonHeltall_10_S71">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S71/494345" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S72" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S72/494344">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S72_RestriksjonHeltall_10_S72">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S72/494344" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S73" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S73/494350">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S73_RestriksjonHeltall_10_S73">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S73/494350" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S27" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S27/494326">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S27_RestriksjonHeltall_11_S27">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S27/494326" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S74" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S74/494342">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S74_RestriksjonHeltall_10_S74">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S74/494342" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S75" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S75/494341">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S75_RestriksjonHeltall_10_S75">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S75/494341" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S76" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S76/494320">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S76_RestriksjonHeltall_10_S76">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S76/494320" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S77" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S77/494319">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S77_RestriksjonHeltall_10_S77">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S77/494319" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S28" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S28/494325">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S28_RestriksjonHeltall_11_S28">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S28/494325" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S29" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S29/494324">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S29_RestriksjonHeltall_11_S29">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S29/494324" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PrinsipperForUtarbeidelse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/PrinsipperForUtarbeidelse/600691">
+    <xsd:sequence>
+      <xsd:element name="prinsippeneBenyttet" type="SvaralternativJaNei_S93" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/prinsippeneBenyttet/600690" />
+      <xsd:element name="kommentar" type="Tekst_255_4" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kommentar/600689" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S93" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S93_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_4" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_4/488644">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_4_RestriksjonTekst_255_4">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_4/488644" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="RevisorsUttalelse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/revisorsUttalelse/600706">
+    <xsd:sequence>
+      <xsd:element name="uttalelseMedAvvik" type="SvaralternativJaNei_S95" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/uttalelseMedAvvik/600705" />
+      <xsd:element name="revisorsSpesifisering" type="RevisorsSpesifisering" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisorsSpesifisering/600704" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S95" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S95_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="RevisorsSpesifisering" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/revisorsSpesifisering/600703">
+    <xsd:sequence>
+      <xsd:element name="negativForklaring" type="Tekst_255_5" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/negativForklaring/600701" />
+      <xsd:element name="forbeholdForklaring" type="Tekst_255_6" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/forbeholdForklaring/600699" />
+      <xsd:element name="presisering" type="SvaralternativJaNei_S98" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/presisering/600697" />
+      <xsd:element name="presiseringForklaring" type="Tekst_255_8" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/presiseringForklaring/600696" />
+      <xsd:element name="andreKommentarer" type="SvaralternativJaNei_S99" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreKommentarer/600694" />
+      <xsd:element name="andreForklaring" type="Tekst_255_S10" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreForklaring/600693" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_5" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_5/488643">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_5_RestriksjonTekst_255_5">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_5/488643" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_6" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_6/488642">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_6_RestriksjonTekst_255_6">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_6/488642" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S98" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S98_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_8" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_8/488640">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_8_RestriksjonTekst_255_8">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_8/488640" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S99" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S99_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_255_S10" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_255_S10_RestriksjonTekst_255_S10">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="AndreOpplysninger" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreOpplysninger/600461">
+    <xsd:sequence>
+      <xsd:element name="forliksklageStevning" type="SvaralternativJaNei_S03" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/forliksklageStevning/600460" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SvaralternativJaNei_S03" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465">
+    <xsd:simpleContent>
+      <xsd:extension base="SvaralternativJaNei_S03_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="AktivForvaltning" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/AktivForvaltning/600459">
+    <xsd:sequence>
+      <xsd:element name="forvaltetKapital" type="ForvaltetKapital" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/forvaltetKapital/600457" />
+      <xsd:element name="kunder" type="Kunder" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kunder/600455" />
+      <xsd:element name="transaksjonskostnader" type="Transaksjonskostnader" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/transaksjonskostnader/620299" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ForvaltetKapital" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForvaltetKapital/600450">
+    <xsd:sequence>
+      <xsd:element name="egenkapitalinstrumenterDerivater" type="Heltall_12_3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/egenkapitalinstrumenterDerivater/600449" />
+      <xsd:element name="gjeldsinstrumenterDerivater" type="Heltall_12_4" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/gjeldsinstrumenterDerivater/600448" />
+      <xsd:element name="andreFinansielleInstrumenter" type="Heltall_9_S07" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andreFinansielleInstrumenter/600447" />
+      <xsd:element name="bankinnskudd" type="Heltall_13_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/bankinnskudd/600446" />
+      <xsd:element name="sum" type="Heltall_10_S88" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/sum/600445" />
+      <xsd:element name="unotertEgentkapitalInstrumentDerivat" type="Heltall_9_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/unotertEgentkapitalInstrumentDerivat/620298" />
+      <xsd:element name="warrantsSammensatteProdukter" type="Heltall_9_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/warrantsSammensatteProdukter/620297" />
+      <xsd:element name="markedsverdiMidlerCFD" type="Heltall_9_S03" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/markedsverdiMidlerCFD/620296" />
+      <xsd:element name="varederivater" type="Heltall_9_S04" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/varederivater/620295" />
+      <xsd:element name="oevrigeDerivater" type="Heltall_9_S05" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/øvrigeDerivater/620294" />
+      <xsd:element name="verdipapirfondsandeler" type="Heltall_9_S06" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/verdipapirfondsandeler/620293" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_12_3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_12_3/490316">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_12_3_RestriksjonHeltall_12_S3">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_12_3/490316" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_12_4" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_12_4/490305">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_12_4_RestriksjonHeltall_12_S4">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_12_4/490305" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S07" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S07/615241">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S07_RestriksjonHeltall_9_S07">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S07/615241" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_13_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_13_S02/493694">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_13_S02_RestriksjonHeltall_13_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_13_S02/493694" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S88" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S88/616968">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S88_RestriksjonHeltall_10_S88">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S88/616968" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S01/493778">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S01_RestriksjonHeltall_9_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S01/493778" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S02/615246">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S02_RestriksjonHeltall_9_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S02/615246" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S03" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S03/615245">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S03_RestriksjonHeltall_9_S03">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S03/615245" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S04" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S04/615244">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S04_RestriksjonHeltall_9_S04">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S04/615244" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S05" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S05/615243">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S05_RestriksjonHeltall_9_S05">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S05/615243" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_9_S06" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S06/615242">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_9_S06_RestriksjonHeltall_9_S06">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_9_S06/615242" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Kunder" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kunder/600427">
+    <xsd:sequence>
+      <xsd:element name="antall" type="Antall" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/antall/600426" />
+      <xsd:element name="portefoeljeverdi" type="Portefoeljeverdi" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/porteføljeverdi/600425" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Antall" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Antall/10604">
+    <xsd:simpleContent>
+      <xsd:extension base="Antall_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Antall/10604" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Portefoeljeverdi" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Porteføljeverdi/600424">
+    <xsd:sequence>
+      <xsd:element name="stoersteKunde" type="Heltall_10_S44" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/størsteKunde/600423" />
+      <xsd:element name="minsteKunde" type="Heltall_10_S80" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/minsteKunde/600422" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S44" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S44/493680">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S44_RestriksjonHeltall_10_S44">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S44/493680" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_10_S80" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S80/494346">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_10_S80_RestriksjonHeltall_10_S80">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_10_S80/494346" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Transaksjonskostnader" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Transaksjonskostnader/620292">
+    <xsd:sequence>
+      <xsd:element name="andelBetaltForetakSammeKonsern" type="Prosent_0_100" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/andelBetaltForetakSammeKonsern/620281" />
+      <xsd:element name="kostnadKjopSalgForventetKapital" type="Heltall_11_S10" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/kostnadKjopSalgForventetKapital/666117" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Prosent_0_100" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Prosent_0_100/634871">
+    <xsd:simpleContent>
+      <xsd:extension base="Prosent_0_100_RestriksjonProsent">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Prosent_0_100/634871" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Heltall_11_S10" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S10/493657">
+    <xsd:simpleContent>
+      <xsd:extension base="Heltall_11_S10_RestriksjonHeltall_11_S10">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_11_S10/493657" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="rapport" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/666134">
+    <xsd:sequence>
+      <xsd:element name="innsender" type="Innsender" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/666132" />
+      <xsd:element name="complianceansvarlige" type="Complianceansvarlige" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/complianceansvarlige/767539" />
+      <xsd:element name="rapportingsansvarlige" type="Rapportingsansvarlige" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportingsansvarlige/767538" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Innsender" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/666131">
+    <xsd:sequence>
+      <xsd:element name="foretak" type="Foretak" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/foretak/666130" />
+      <xsd:element name="adresse" type="Adresse" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/666129" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Foretak" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Foretak/446118">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/organisasjonsnummer/446117" />
+      <xsd:element name="navn" type="Foretaksnavn" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/navn/446116" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjonsnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/472763">
+    <xsd:simpleContent>
+      <xsd:extension base="Organisasjonsnummer_RestriksjonOrganisasjonsnummer">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/472763" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Foretaksnavn" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250">
+    <xsd:simpleContent>
+      <xsd:extension base="Foretaksnavn_RestriksjonForetaksnavn">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Adresse" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282">
+    <xsd:sequence>
+      <xsd:element name="postnummer" type="Postnummer" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/postnummer/660281" />
+      <xsd:element name="adresselinje1" type="Adresselinje1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/adresselinje1/660280" />
+      <xsd:element name="poststed" type="Poststed" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/poststed/660279" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Postnummer" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288">
+    <xsd:simpleContent>
+      <xsd:extension base="Postnummer_RestriksjonPostnummer">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Adresselinje1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286">
+    <xsd:simpleContent>
+      <xsd:extension base="Adresselinje1_RestriksjonAdresselinje1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Poststed" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287">
+    <xsd:simpleContent>
+      <xsd:extension base="Poststed_RestriksjonPoststed">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Complianceansvarlige" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Complianceansvarlige/767535">
+    <xsd:sequence>
+      <xsd:element name="complianceansvarlig" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/complianceansvarlig/767534">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Complianceansvarlig">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Complianceansvarlig" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Complianceansvarlig/609319">
+    <xsd:sequence>
+      <xsd:element name="navnCompliance" type="Navn_S3" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/navnCompliance/609187" />
+      <xsd:element name="prefiksTelefonnummerCompliance" type="Landprefiks_S02" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/prefiksTelefonnummerCompliance/609188" />
+      <xsd:element name="telefonnummerCompliance" type="Telefonnummer_S03" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnummerCompliance/609186" />
+      <xsd:element name="epostCompliance" type="Epost_S2" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/epostCompliance/609185" />
+      <xsd:element name="foedselsnummer" type="Tekst_11_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/fødselsnummer/611667" />
+      <xsd:element name="etternavn" type="Etternavn_S1" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/etternavn/767111" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Navn_S3" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S3/487452">
+    <xsd:simpleContent>
+      <xsd:extension base="Navn_S3_RestriksjonNavn_S3">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S3/487452" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Landprefiks_S02" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Landprefiks_S02/519303">
+    <xsd:simpleContent>
+      <xsd:extension base="Landprefiks_S02_RestriksjonLandprefiks_S02">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Landprefiks_S02/519303" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Telefonnummer_S03" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Telefonnummer_S03/525780">
+    <xsd:simpleContent>
+      <xsd:extension base="Telefonnummer_S03_RestriksjonTelefon30_S03">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Telefonnummer_S03/525780" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Epost_S2" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S2/483746">
+    <xsd:simpleContent>
+      <xsd:extension base="Epost_S2_RestriksjonEpost_S2">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S2/483746" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Tekst_11_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_11_S01/602422">
+    <xsd:simpleContent>
+      <xsd:extension base="Tekst_11_S01_RestriksjonTekst_11_S01">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_11_S01/602422" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Etternavn_S1" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Etternavn_S1/488627">
+    <xsd:simpleContent>
+      <xsd:extension base="Etternavn_S1_RestriksjonEtternavn_S1">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Etternavn_S1/488627" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Rapportingsansvarlige" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering2/666136">
+    <xsd:sequence>
+      <xsd:element name="kontaktperson1" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/666135">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Kontaktperson1">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktperson1" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652">
+    <xsd:sequence>
+      <xsd:element name="epost" type="Epost_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/epost/637651" />
+      <xsd:element name="navn" type="Navn_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/navn/637650" />
+      <xsd:element name="telefonnummer" type="TelefonNummer_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnr/637649" />
+      <xsd:element name="telefonprefiks" type="TelefonPrefiks_S01" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonPrefiks/637648" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Epost_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664">
+    <xsd:simpleContent>
+      <xsd:extension base="Epost_S01_Verdirestriksjon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Navn_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662">
+    <xsd:simpleContent>
+      <xsd:extension base="Navn_S01_RestriksjonNavn">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TelefonNummer_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660">
+    <xsd:simpleContent>
+      <xsd:extension base="TelefonNummer_S01_RestriksjonTelefon">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TelefonPrefiks_S01" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658">
+    <xsd:simpleContent>
+      <xsd:extension base="TelefonPrefiks_S01_RestriksjonTelefonPrefiks">
+        <xsd:attribute name="guid" type="xsd:string" use="required" fixed="http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="AAr_Verdirestriksjon">
+    <xsd:restriction base="xsd:gYear" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Rapporteringsperiode_2valg_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/1/600737" />
+      <xsd:enumeration value="2" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/2/600736" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//600735" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S82_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/519657" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/519656" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//519655" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Rapportering_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Forvaltningsselskap" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Forvaltningsselskap/608325" />
+      <xsd:enumeration value="AIF-forvalter" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/AIF-forvalter/608324" />
+      <xsd:enumeration value="ForvaltningsselskapOgAIF-forvalter" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/ForvaltningsselskapOgAIF-forvalter/608323" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//608322" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_5_1_RestriksjonHeltall_5_1" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_5_1/520155">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_5_2_RestriksjonHeltall_5_2" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_5_2/520152">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_5_3_RestriksjonHeltall_5_3" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_5_3/520506">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_5_4_RestriksjonHeltall_5_4" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_5_4/520151">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_5_5_RestriksjonHeltall_5_5" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_5_5/520122">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="5" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_6_1_RestriksjonHeltall_6_1" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_6_1/520154">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_8_S01_RestriksjonHeltall_8_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_8_S1/520398">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_8_S02_RestriksjonHeltall_8_S02" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_8_S2/520397">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn_S2_RestriksjonNavn_S2" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonNavn_S2/519563">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="150" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RevisorregisterNr_RestriksjonRevisorregisterNr" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonRevisorregisterNr/523150">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="8" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Landprefiks_S01_RestriksjonLandprefiks_S01" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonLandprefiks_S01/519302">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer_S02_RestriksjonTelefon15_S02" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTelefon15_S02/519301">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S92_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/508212" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/508211" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//508210" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer_S2_RestriksjonOrganisasjonsnummer_S2" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonOrganisasjonsnummer_S2/519551">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnavn_S2_RestriksjonOrganisasjonsnavn_S2" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonOrganisasjonsnavn_S2/519546">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Rapport_Frekvens_RestriksjonRapport_Frekvens" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonRapport_Frekvens/594340">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dist_Periode_RestriksjonDist_Periode" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonDist_Periode/594218">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="2" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Rapport_Periode_Verdirestriksjon">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="PeriodeType_RestriksjonTekst10_1" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst10_1/569919">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S03_RestriksjonHeltall_11_S03" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S03/520120">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S9_RestriksjonHeltall_10_S9" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S9/520399">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S06_RestriksjonHeltall_11_S06" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S06/520117">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_3_RestriksjonTekst_255_3" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_3/519593">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S1_RestriksjonHeltall_10_S1" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S1/520418">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S45_RestriksjonHeltall_10_S45" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S45/520071">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S46_RestriksjonHeltall_10_S46" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S46/520070">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S47_RestriksjonHeltall_10_S47" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S47/520069">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S48_RestriksjonHeltall_10_S48" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S48/520031">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S49_RestriksjonHeltall_10_S49" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S49/520030">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S85_RestriksjonHeltall_10_S85" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S85/520045">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S2_RestriksjonHeltall_10_S2" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S2/520407">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S50_RestriksjonHeltall_10_S50" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S50/520040">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S51_RestriksjonHeltall_10_S51" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S51/520038">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S52_RestriksjonHeltall_10_S52" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S52/520147">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S53_RestriksjonHeltall_10_S53" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S53/520146">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S54_RestriksjonHeltall_10_S54" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S54/520065">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S86_RestriksjonHeltall_10_S86" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S86/608327">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S4_RestriksjonHeltall_10_S4" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S4/520404">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S5_RestriksjonHeltall_10_S5" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S5/520403">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S55_RestriksjonHeltall_10_S55" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S55/520034">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S56_RestriksjonHeltall_10_S56" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S56/520033">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S3_RestriksjonHeltall_10_S3" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S3/520072">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S01_RestriksjonHeltall_11_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S01/520149">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S32_RestriksjonHeltall_11_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S01/520149">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S31_RestriksjonHeltall_11_S31" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S31/520020">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S30_RestriksjonHeltall_11_S30" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S30/520021">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S78_RestriksjonHeltall_10_S78" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S78/520061">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S17_RestriksjonHeltall_11_S17" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S17/520106">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S18_RestriksjonHeltall_11_S18" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S18/520105">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S6_RestriksjonHeltall_10_S6" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S6/520402">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S7_RestriksjonHeltall_10_S7" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S7/520401">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S57_RestriksjonHeltall_10_S57" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S57/520032">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S8_RestriksjonHeltall_10_S82" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S82/520400">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S02_RestriksjonHeltall_11_S02" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S02/520121">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S17_RestriksjonHeltall_9_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S01/520075">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S18_RestriksjonHeltall_9_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S01/520075">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S04_RestriksjonHeltall_11_S04" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S04/520119">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S10_RestriksjonHeltall_10_S10" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S10/520417">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S13_RestriksjonHeltall_10_S13" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S13/520414">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S15_RestriksjonHeltall_10_S15" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S15/520412">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S58_RestriksjonHeltall_10_S58" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S58/520042">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S59_RestriksjonHeltall_10_S59" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S59/520041">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S60_RestriksjonHeltall_10_S60" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S60/520140">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S61_RestriksjonHeltall_10_S61" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S61/520068">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S62_RestriksjonHeltall_10_S62" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S62/520067">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S63_RestriksjonHeltall_10_S63" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S63/520066">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S23_RestriksjonHeltall_11_S23" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S23/520028">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S64_RestriksjonHeltall_10_S64" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S64/520145">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S65_RestriksjonHeltall_10_S65" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S65/520054">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S66_RestriksjonHeltall_10_S66" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S66/520053">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S67_RestriksjonHeltall_10_S67" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S67/520052">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S24_RestriksjonHeltall_11_S24" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S24/520027">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S25_RestriksjonHeltall_11_S25" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S25/520026">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S81_RestriksjonHeltall_10_S81" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S81/520047">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S68_RestriksjonHeltall_10_S68" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S68/520051">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S14_RestriksjonHeltall_10_S14" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S14/520413">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S16_RestriksjonHeltall_10_S16" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S16/520411">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S17_RestriksjonHeltall_10_S17" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S17/520410">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S07_RestriksjonHeltall_11_S07" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S07/520116">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_1_RestriksjonTekst_255_1" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_1/519595">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S26_RestriksjonHeltall_11_S26" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S26/520025">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S69_RestriksjonHeltall_10_S69" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S69/520050">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S70_RestriksjonHeltall_10_S70" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S70/520059">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S71_RestriksjonHeltall_10_S71" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S71/520058">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S72_RestriksjonHeltall_10_S72" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S72/520057">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S73_RestriksjonHeltall_10_S73" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S73/520056">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S27_RestriksjonHeltall_11_S27" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S27/520024">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S74_RestriksjonHeltall_10_S74" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S74/520055">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S75_RestriksjonHeltall_10_S75" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S75/520064">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S76_RestriksjonHeltall_10_S76" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S76/520063">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S77_RestriksjonHeltall_10_S77" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S77/520062">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S28_RestriksjonHeltall_11_S28" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S28/520023">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S29_RestriksjonHeltall_11_S29" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S29/520022">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S93_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/508208" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/508207" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//508206" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_4_RestriksjonTekst_255_4" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_4/519592">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S95_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/600733" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/600732" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//600731" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_5_RestriksjonTekst_255_5" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_5/519591">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_6_RestriksjonTekst_255_6" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_6/519590">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S98_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/600721" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/600720" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//600719" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_8_RestriksjonTekst_255_8" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_8/519588">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S99_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/600717" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/600716" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//600715" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_255_S10_RestriksjonTekst_255_S10" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_255_S10/600711">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SvaralternativJaNei_S03_Verdirestriksjon">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ja" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Ja/519992" />
+      <xsd:enumeration value="Nei" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement/Nei/519991" />
+      <xsd:enumeration value="" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Finanstilsynet/Datakodeelement//519990" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_12_3_RestriksjonHeltall_12_S3" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_12_S3/520337">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="12" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_12_4_RestriksjonHeltall_12_S4" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_12_S4/520388">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="12" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S07_RestriksjonHeltall_9_S07" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S07/615224">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_13_S02_RestriksjonHeltall_13_S02" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_13_S02/520405">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="13" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S88_RestriksjonHeltall_10_S88" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S88/616967">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S01_RestriksjonHeltall_9_S01" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S01/520075">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S02_RestriksjonHeltall_9_S02" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S02/615228">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S03_RestriksjonHeltall_9_S03" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S03/615227">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S04_RestriksjonHeltall_9_S04" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S04/615226">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S05_RestriksjonHeltall_9_S05" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S05/615225">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_9_S06_RestriksjonHeltall_9_S06" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_9_S06/615221">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Antall_Verdirestriksjon">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S44_RestriksjonHeltall_10_S44" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S44/520035">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_10_S80_RestriksjonHeltall_10_S80" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_10_S80/520048">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Prosent_0_100_RestriksjonProsent" seres:elementtype="Verdirestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Verdirestriksjon/RestriksjonProsent/615248">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall_11_S10_RestriksjonHeltall_11_S10" seres:elementtype="Tallrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tallrestriksjon/RestriksjonHeltall_11_S10/520113">
+    <xsd:restriction base="xsd:integer">
+      <xsd:totalDigits value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer_RestriksjonOrganisasjonsnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonOrganisasjonsnummer/520950">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Foretaksnavn_RestriksjonForetaksnavn" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonForetaksnavn/639249">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Postnummer_RestriksjonPostnummer" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonPostnummer/660283">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Adresselinje1_RestriksjonAdresselinje1" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonAdresselinje1/660285">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="175" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Poststed_RestriksjonPoststed" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonPoststed/660284">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="35" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn_S3_RestriksjonNavn_S3" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonNavn_S3/519562">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="150" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Landprefiks_S02_RestriksjonLandprefiks_S02" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonLandprefiks_S02/519300">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer_S03_RestriksjonTelefon30_S03" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTelefon30_S03/525778">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost_S2_RestriksjonEpost_S2" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonEpost_S2/523081">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst_11_S01_RestriksjonTekst_11_S01" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTekst_11_S01/602357">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Etternavn_S1_RestriksjonEtternavn_S1" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonEtternavn_S1/519560">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="100" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Epost_S01_Verdirestriksjon">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Navn_S01_RestriksjonNavn" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonNavn/637655">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TelefonNummer_S01_RestriksjonTelefon" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTelefon/637653">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="20" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TelefonPrefiks_S01_RestriksjonTelefonPrefiks" seres:elementtype="Tegnrestriksjon" seres:guid="http://seres.no/guid/Finanstilsynet/Tegnrestriksjon/RestriksjonTelefonPrefiks/637654">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="4" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

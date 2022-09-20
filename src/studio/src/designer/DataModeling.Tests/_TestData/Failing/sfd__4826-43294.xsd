@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.17" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2018-07-12T14:44:17.309+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/Sjøfartsdirektoratet/BegjæringOmInspeksjonRest_M/2018" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="Sjøfartsdirektoratet" />
+      <xsd:attribute name="modellnavn" fixed="BegjæringOmInspeksjonRest_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="true" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="true" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="særnorske-bokstaver-i-navn" fixed="true" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="språk" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn 1.3.1" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="BegjæringOmInspeksjonRest_M" />
+  <xsd:complexType name="BegjæringOmInspeksjonRest_M" seres:elementtype="Meldingsmodell" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Meldingsmodell/BegjæringOmInspeksjonRest_M/607180">
+    <xsd:sequence>
+      <xsd:element name="Rapportørdata" type="Rapportørdata" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Meldingsdel/Rapportørdata/607178" />
+      <xsd:element name="InnrapporterteData" type="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Meldingsdel/InnrapporterteData/607175" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="4826" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="43294" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Rapportørdata" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Meldingsdel/Rapportørdata/607178">
+    <xsd:sequence>
+      <xsd:element name="innsender" type="InnsenderRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/innsender/607177" />
+      <xsd:element name="rapportererFor" type="RapportererForRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/rapportererFor/607176" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InnsenderRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/InnsenderRest/607219">
+    <xsd:sequence>
+      <xsd:element name="fødselsnummer" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/fødselsnummer/607218" />
+      <xsd:element name="navn" type="PersonnavnRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/navn/607217" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PersonnavnRest" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakomplekstype/PersonnavnRest/607238">
+    <xsd:sequence>
+      <xsd:element name="fornavn" type="TekstRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/fornavn/607237" />
+      <xsd:element name="etternavn" type="TekstRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/etternavn/607236" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RapportererForRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/RapportererForRest/607216">
+    <xsd:sequence>
+      <xsd:element name="organisasjonsadresse" type="AdresseRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonsadresse/607215" />
+      <xsd:element name="organisasjonsnavn" type="NavnRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonsnavn/607214" />
+      <xsd:element name="organisasjonsnummer" type="TekstRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonsnummer/607213" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AdresseRest" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakomplekstype/AdresseRest/607248">
+    <xsd:sequence>
+      <xsd:element name="adresselinje1" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/adresselinje1/607247" />
+      <xsd:element name="postnummer" type="PostnummerRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/postnummer/607246" />
+      <xsd:element name="poststed" type="PoststedRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/poststed/607245" />
+      <xsd:element name="adresselinje2" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/adresselinje2/607244" />
+      <xsd:element name="land" type="KodeverkElementRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/land/607243" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="KodeverkElementRest" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakomplekstype/KodeverkElementRest/607259">
+    <xsd:sequence>
+      <xsd:element name="id" type="TekstRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/id/607258" />
+      <xsd:element name="kode" type="TekstRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/kode/607257" />
+      <xsd:element name="beskrivelse" type="TekstRest" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/beskrivelse/607256" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InnrapporterteData" seres:elementtype="Meldingsdel" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Meldingsdel/InnrapporterteData/607175">
+    <xsd:sequence>
+      <xsd:element name="søker" type="Søker" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/søker/607174" />
+      <xsd:element name="fartøy" type="Fartøy" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/fartøy/607173" />
+      <xsd:element name="organisasjoner" type="Organisasjoner" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/organisasjoner/607992" />
+      <xsd:element name="skjema" type="SkjemaRest" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/skjema/616533" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Søker" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Søker/607171">
+    <xsd:sequence>
+      <xsd:element name="rederi" type="OrganisasjonRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/rederi/607170" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrganisasjonRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/OrganisasjonRest/607191">
+    <xsd:sequence>
+      <xsd:element name="organisasjonId" type="IdentifikasjonsnummerRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonId/607190" />
+      <xsd:element name="organisasjonsnavn" type="NavnRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonsnavn/607189" />
+      <xsd:element name="organisasjonsnummer" type="OrganisasjonsnummerRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/organisasjonsnummer/607188" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Fartøy" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Fartøy/607169">
+    <xsd:sequence>
+      <xsd:element name="Fartøydata" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Fartøydata/607991">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Fartøydata">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Fartøydata" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Fartøydata/607990">
+    <xsd:sequence>
+      <xsd:element name="Fartøy" type="FartøyRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Fartøy/607989" />
+      <xsd:element name="Inspeksjon" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Inspeksjon/607988">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Inspeksjon">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="skade" type="BolskRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/skade/607994" />
+      <xsd:element name="nybygg" type="BolskRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/nybygg/607993" />
+      <xsd:element name="vedlegg" type="Vedlegg" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/vedlegg/621659" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FartøyRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/FartøyRest/607212">
+    <xsd:sequence>
+      <xsd:element name="bruttotonnasje" type="BruttotonnasjeRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/bruttotonnasje/607211" />
+      <xsd:element name="fartøytyper" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/fartøytyper/607210" />
+      <xsd:element name="id" type="IdentifikasjonsnummerRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/id/607209" />
+      <xsd:element name="imonummer" type="ImonummerRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/imonummer/607208" />
+      <xsd:element name="kjenningssignal" type="KjenningssignalRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/kjenningssignal/607207" />
+      <xsd:element name="navn" type="NavnRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/navn/607206" />
+      <xsd:element name="eier" type="OrganisasjonRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/eier/607205" />
+      <xsd:element name="maksLengde" type="MaksLengdeRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/maksLengde/607204" />
+      <xsd:element name="sikkerhetstonnasje" type="SikkerhetstonnasjeRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/sikkerhetstonnasje/607203" />
+      <xsd:element name="Klasse" type="KodeverkElementRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/Klasse/616535" />
+      <xsd:element name="Klasseselskap" type="OrganisasjonsnummerRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/Klasseselskap/616534" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Inspeksjon" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Inspeksjon/607165">
+    <xsd:sequence>
+      <xsd:element name="inspeksjonstype" type="InspeksjonstypeRest" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/inspeksjonstype/607164" />
+      <xsd:element name="sertifikat" type="SertifikattypeRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/sertifikat/607163" />
+      <xsd:element name="ønsketInspeksjonFra" type="DatoRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/ønsketInspeksjonFra/607158" />
+      <xsd:element name="ønsketInspeksjonTil" type="DatoRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/ønsketInspeksjonTil/607157" />
+      <xsd:element name="lokasjon" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/lokasjon/607156" />
+      <xsd:element name="valgtStasjon" type="KodeverkElementRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/valgtStasjon/607155" />
+      <xsd:element name="kommentarer" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/kommantarer/608035" />
+      <xsd:element name="kontaktperson" type="Kontaktperson" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/kontaktperson/608034" />
+      <xsd:element name="dokkFra" type="DatoRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/dokkFra/638692" />
+      <xsd:element name="dokkTil" type="DatoRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/dokkTil/638691" />
+      <xsd:element name="tildelesRegionskontor" type="BolskRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InspeksjonstypeRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/InspeksjonstypeRest/607187">
+    <xsd:sequence>
+      <xsd:element name="id" type="IdentifikasjonsnummerRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/id/607186" />
+      <xsd:element name="beskrivelse" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/beskrivelse/607185" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SertifikattypeRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/SertifikattypeRest/607184">
+    <xsd:sequence>
+      <xsd:element name="beskrivelse" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/beskrivelse/607183" />
+      <xsd:element name="id" type="IdentifikasjonsnummerRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/id/607182" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktperson" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Kontaktperson/608024">
+    <xsd:sequence>
+      <xsd:element name="Person" type="KontaktpersonRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Person/608023" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="KontaktpersonRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/KontaktpersonRest/608030">
+    <xsd:sequence>
+      <xsd:element name="kontaktinformasjon" type="KontaktinformasjonRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/kontaktinformasjon/608029" />
+      <xsd:element name="navn" type="PersonnavnRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/navn/608028" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="KontaktinformasjonRest" seres:elementtype="Datakomplekstype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakomplekstype/KontaktinformasjonRest/607255">
+    <xsd:sequence>
+      <xsd:element name="telefon" type="TelefonnummerRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/telefon/607254" />
+      <xsd:element name="mobil" type="TelefonnummerRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/mobil/607253" />
+      <xsd:element name="epost" type="EPostRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/epost/607252" />
+      <xsd:element name="telefax" type="TelefonnummerRest" nillable="true" minOccurs="0" seres:elementtype="DataTypeegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/DataTypeegenskap/telefax/607251" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Vedlegg" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Vedlegg/621658">
+    <xsd:sequence>
+      <xsd:element name="filnavn" type="Tekst" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/filnavn/621657" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjoner" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Organisasjoner/607985">
+    <xsd:sequence>
+      <xsd:element name="Organisasjon" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Organisasjon/607984">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Organisasjon">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Organisasjon" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/Organisasjon/607983">
+    <xsd:sequence>
+      <xsd:element name="Organisasjon" type="OrganisasjonRest" nillable="true" minOccurs="0" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Organisasjon/607982" />
+      <xsd:element name="Inspeksjoner" nillable="true" minOccurs="0" maxOccurs="unbounded" seres:elementtype="Relasjonsegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Relasjonsegenskap/Inspeksjoner/607981">
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="Inspeksjon">
+              <xsd:anyAttribute />
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SkjemaRest" seres:elementtype="Dataobjekttype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataobjekttype/SkjemaRest/608106">
+    <xsd:sequence>
+      <xsd:element name="behandlingsregelsett" type="TekstRest" nillable="true" minOccurs="0" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/behandlingsregelsett/608105" />
+      <xsd:element name="skjemaErLastet" type="BolskRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/skjemaErLastet/608104" />
+      <xsd:element name="språkkode" type="SpråkkodeRest" seres:elementtype="Dataegenskap" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataegenskap/språkkode/608103" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="TekstRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/TekstRest/607260">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="PostnummerRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/PostnummerRest/607242">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="PoststedRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/PoststedRest/607241">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="NavnRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/NavnRest/607235">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifikasjonsnummerRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/IdentifikasjonsnummerRest/607261">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="OrganisasjonsnummerRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/OrganisasjonsnummerRest/607233">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="BruttotonnasjeRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/BruttotonnasjeRest/607232">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="ImonummerRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/ImonummerRest/607231">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="KjenningssignalRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/KjenningssignalRest/607230">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="MaksLengdeRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/MaksLengdeRest/607229">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="SikkerhetstonnasjeRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/SikkerhetstonnasjeRest/607228">
+    <xsd:restriction base="xsd:decimal" />
+  </xsd:simpleType>
+  <xsd:simpleType name="DatoRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/DatoRest/607240">
+    <xsd:restriction base="xsd:dateTime" />
+  </xsd:simpleType>
+  <xsd:simpleType name="TelefonnummerRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/TelefonnummerRest/607249">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="EPostRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/EPostRest/607250">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="BolskRest" seres:elementtype="Datakodeliste" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakodeliste/BolskRest/607227">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakodeelement/true/607226" />
+      <xsd:enumeration value="false" seres:elementtype="Datakodeelement" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Datakodeelement/false/607225" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/Tekst/477797">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="SpråkkodeRest" seres:elementtype="Dataenkeltype" seres:guid="http://seres.no/guid/Sjøfartsdirektoratet/Dataenkeltype/SpråkkodeRest/607234">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+</xsd:schema>

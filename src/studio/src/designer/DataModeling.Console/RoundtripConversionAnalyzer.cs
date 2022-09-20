@@ -15,21 +15,60 @@ using Altinn.Studio.DataModeling.Json;
 using Altinn.Studio.DataModeling.Json.Keywords;
 using DataModeling.Tests.Assertions;
 using Json.Schema;
+using Microsoft.Extensions.Logging;
 
 namespace DataModeling.Console
 {
     public class RoundtripConversionAnalyzer
     {
-        private const string SchemaRootPath = @"C:\temp\ai2dm";
-        
-        public async Task VerifyAltinn2Xsd()
+        private const string SchemaRootPath = @"C:\Users\misha\Documents\digdir\data\ai2dm_13.09.2022";
+        private const string JsonSchemaUploadLocation = @"C:\Users\misha\Documents\digdir\data\JsonSchemas";
+
+        public async Task VerifyAltinn2Xsd(bool exportJsonSchemas = false)
         {
             var seresSchemas = new List<(string Name, XmlSchema Schema)>();
             var otherSchemas = new List<(string Name, XmlSchema Schema)>();
 
+            var failed = new List<(string, string)>();
+
+            var failedList = JsonSerializer.Deserialize<List<string>>(
+                 await File.ReadAllTextAsync(@"C:\Users\misha\Documents\digdir\data\failedSchemaNames.json")
+                );
+
             var schemaFiles = Directory
                 .EnumerateFiles(SchemaRootPath, "*.xsd", SearchOption.AllDirectories)
                 .ToArray();
+
+            var fileStruc = schemaFiles.Select(x =>
+            {
+                var shortFileName = Path.GetFileName(x);
+
+                var org = x[(SchemaRootPath.Length + 1)..].Split("\\").First();
+                return new
+                {
+                    FileName = shortFileName,
+                    Org = org
+                };
+            }).Where(x => failedList.Contains(x.FileName)).ToArray();
+
+            var grouped = fileStruc.GroupBy(x => x.Org)
+                .Select(g =>
+                {
+                    return new
+                    {
+                        Org = g.Key,
+                        Files = g.Select(g => g.FileName).ToList(),
+                        Count = g.Count()
+                    };
+                }).ToList();
+
+            var s = "";
+            foreach (var item in grouped)
+            {
+                s += $"Organization: {item.Org}, Count: {item.Count}, Items:{Environment.NewLine}";
+                s = item.Files.Aggregate(s, (current, file) => current + $"    - {file}{Environment.NewLine}");
+            }
+
 
             PopulateSchemaCollections(schemaFiles, seresSchemas, otherSchemas);
 
@@ -37,7 +76,7 @@ namespace DataModeling.Console
 
             int failedCount = 0;
             int successCount = 0;
-            foreach (var schemaItem in otherSchemas)
+            foreach (var schemaItem in seresSchemas)
             {
                 System.Console.WriteLine($"Processing schema {schemaItem.Name}");
 
@@ -46,7 +85,14 @@ namespace DataModeling.Console
                     // Convert the XSD to JSON Schema
                     var xsdToJsonConverter = new XmlSchemaToJsonSchemaConverter();
                     JsonSchema convertedJsonSchema = xsdToJsonConverter.Convert(schemaItem.Schema);
-                    var convertedJsonSchemaString = JsonSerializer.Serialize(convertedJsonSchema, new JsonSerializerOptions() { Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Latin1Supplement), WriteIndented = true });
+
+                    if (exportJsonSchemas)
+                    {
+                        var convertedJsonSchemaString = JsonSerializer.Serialize(convertedJsonSchema, new JsonSerializerOptions() { Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Latin1Supplement), WriteIndented = true });
+                        var jsonSchemaName = Path.Combine(JsonSchemaUploadLocation,
+                            Path.GetFileNameWithoutExtension(schemaItem.Name) + ".json");
+                        await File.WriteAllTextAsync(jsonSchemaName, convertedJsonSchemaString);
+                    }
 
                     // Convert the converted JSON Schema back to XSD
                     var jsonToXsdConverter = new JsonSchemaToXmlSchemaConverter(new JsonSchemaNormalizer());

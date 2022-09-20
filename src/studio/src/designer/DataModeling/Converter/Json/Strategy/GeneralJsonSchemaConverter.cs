@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using Altinn.Studio.DataModeling.Json.Keywords;
@@ -127,10 +130,35 @@ namespace Altinn.Studio.DataModeling.Converter.Json.Strategy
             }
 
             var schemaSet = new XmlSchemaSet();
+            var xxx = Serialize(_xsd).Result;
             schemaSet.Add(_xsd);
             schemaSet.Compile();
 
             return _xsd;
+        }
+
+        private static async Task<string> Serialize(XmlSchema xmlSchema)
+        {
+            string actualXml;
+            await using (var sw = new Utf8StringWriter())
+            await using (var xw = XmlWriter.Create(sw, new XmlWriterSettings { Indent = true, Async = true }))
+            {
+                xmlSchema.Write(xw);
+                actualXml = sw.ToString();
+            }
+
+            return actualXml;
+        }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        internal class Utf8StringWriter : StringWriter
+        {
+            /// <summary>
+            /// test
+            /// </summary>
+            public override Encoding Encoding => Encoding.UTF8;
         }
 
         private void HandleSchemaAttributes()

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xml:lang="nb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:seres="http://seres.no/xsd/forvaltningsdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:altinn="www.altinn.no/infopath-extensions">
+  <xsd:annotation>
+    <xsd:documentation>
+      <xsd:attribute name="XSLT-skriptnavn" fixed="SERES_XSD_GEN" />
+      <xsd:attribute name="XSD-generatorversjon" fixed="2.0.13" />
+      <xsd:attribute name="XSLT-prosessor" fixed="SAXON versjon 9.1.0.7" />
+      <xsd:attribute name="generert" fixed="2014-08-19T11:33:12.091+02:00" />
+      <xsd:attribute name="navneromprefix" fixed="http://seres.no/xsd" />
+      <xsd:attribute name="namespace" fixed="http://seres.no/xsd/SKD-Test/RF-1316-Attestbestillinger_M/2014" />
+      <xsd:attribute name="meldingsnavn" fixed="melding" />
+      <xsd:attribute name="domenenavn" fixed="SKD-Test" />
+      <xsd:attribute name="modellnavn" fixed="RF-1316-Attestbestillinger_M" />
+      <xsd:attribute name="metamodellversjon" fixed="1.2" />
+      <xsd:attribute name="guid" fixed="false" />
+      <xsd:attribute name="orid" fixed="false" />
+      <xsd:attribute name="nillable" fixed="true" />
+      <xsd:attribute name="tillat-gjenbruk" fixed="true" />
+      <xsd:attribute name="elementtype" fixed="false" />
+      <xsd:attribute name="forvaltningsdata" fixed="true" />
+      <xsd:attribute name="forvaltningsdata-navnerom" fixed="http://seres.no/xsd/forvaltningsdata" />
+      <xsd:attribute name="særnorske-bokstaver-i-navn" fixed="false" />
+      <xsd:attribute name="ft_guid_som_attributt" fixed="false" />
+      <xsd:attribute name="sem-ref" fixed="false" />
+      <xsd:attribute name="kodebibliotek" fixed="false" />
+      <xsd:attribute name="språk" fixed="" />
+      <xsd:attribute name="XSD-variant" fixed="Altinn" />
+      <xsd:attribute name="XSD-transformatorversjon" fixed="1.2" />
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="melding" type="RF-1316-Attestbestillinger_M" />
+  <xsd:complexType name="RF-1316-Attestbestillinger_M">
+    <xsd:sequence>
+      <xsd:element name="Attestbestilling" type="Attestbestilling" />
+    </xsd:sequence>
+    <xsd:attribute name="dataFormatProvider" type="xsd:string" use="required" fixed="SERES" />
+    <xsd:attribute name="dataFormatId" type="xsd:string" use="required" fixed="4401" />
+    <xsd:attribute name="dataFormatVersion" type="xsd:string" use="required" fixed="32883" />
+    <xsd:anyAttribute />
+  </xsd:complexType>
+  <xsd:complexType name="Attestbestilling">
+    <xsd:sequence>
+      <xsd:element name="bestiller" type="Bestiller" nillable="true" minOccurs="0" />
+      <xsd:element name="kontaktinformasjon" type="Kontaktinformasjon" nillable="true" minOccurs="0" />
+      <xsd:element name="attest" type="Attest" nillable="true" minOccurs="0" maxOccurs="999" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Bestiller">
+    <xsd:sequence>
+      <xsd:element name="navn " type="Navn" nillable="true" minOccurs="0" />
+      <xsd:element name="adresse" type="GenerellAdresse" nillable="true" minOccurs="0" />
+      <xsd:element name="foedselsnummer" type="Foedselsnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerellAdresse">
+    <xsd:sequence>
+      <xsd:element name="adressetekst" type="Tekst" nillable="true" minOccurs="0" />
+      <xsd:element name="poststed" type="Poststed" nillable="true" minOccurs="0" />
+      <xsd:element name="landkode" type="Landkode" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Poststed">
+    <xsd:sequence>
+      <xsd:element name="postnummer" type="Tekst" nillable="true" minOccurs="0" />
+      <xsd:element name="poststedsnavn" type="Heltall" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Kontaktinformasjon">
+    <xsd:sequence>
+      <xsd:element name="navn" type="Navn" nillable="true" minOccurs="0" />
+      <xsd:element name="mobilnummer" type="Telefonnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="epostadresse" type="Epostadresse" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Attest">
+    <xsd:sequence>
+      <xsd:element name="attesttype" type="Tekst" nillable="true" minOccurs="0" />
+      <xsd:element name="spraak" type="Tekst" nillable="true" minOccurs="0" />
+      <xsd:element name="sergreferanse" type="Tekst" nillable="true" minOccurs="0" />
+      <xsd:element name="subjektsFoedselsnummer" type="Foedselsnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="subjektsOrganisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="inntektsaar" type="Heltall" nillable="true" minOccurs="0" />
+      <xsd:element name="eiendomMatrikkel" type="Matrikkelnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="eiendomOrganisasjonsnummer" type="EiendomsidentifikatorOrganisasjonsnummer" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Matrikkelnummer">
+    <xsd:sequence>
+      <xsd:element name="kommunenummer" type="Kommunenummer" nillable="true" minOccurs="0" />
+      <xsd:element name="festenummer" type="Heltall" nillable="true" minOccurs="0" />
+      <xsd:element name="gaardsnummer" type="Heltall" nillable="true" minOccurs="0" />
+      <xsd:element name="bruksnummer" type="Heltall" nillable="true" minOccurs="0" />
+      <xsd:element name="seksjonsnummer" type="Heltall" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EiendomsidentifikatorOrganisasjonsnummer">
+    <xsd:sequence>
+      <xsd:element name="kommunenummer" type="Kommunenummer" nillable="true" minOccurs="0" />
+      <xsd:element name="organisasjonsnummer" type="Organisasjonsnummer" nillable="true" minOccurs="0" />
+      <xsd:element name="andelsnummer" type="Heltall" nillable="true" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Navn">
+    <xsd:restriction base="xsd:token" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Tekst">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Heltall">
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Landkode">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Foedselsnummer">
+    <xsd:restriction base="RestriksjonFoedselsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonFoedselsnummer">
+    <xsd:restriction base="xsd:token">
+      <xsd:length value="11" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Organisasjonsnummer">
+    <xsd:restriction base="RestriksjonOrganisasjonsnummer" />
+  </xsd:simpleType>
+  <xsd:simpleType name="RestriksjonOrganisasjonsnummer">
+    <xsd:restriction base="xsd:token">
+      <xsd:length value="9" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Telefonnummer">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Epostadresse">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="Kommunenummer">
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+</xsd:schema>
